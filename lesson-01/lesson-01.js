@@ -1,180 +1,207 @@
-const foo = 'foo111';
-console.log(foo);
+// # Модуль 1. Заняття 1. Змінні, типи та оператори
 
+// ## Example 1 - Математичні оператори
 
-# Модуль 1. Заняття 1. Змінні, типи та оператори
+// Виведи на екран загальну кількість яблук та винограду. Різницю яблук та винограду.
 
-## Example 1 - Математичні оператори
+// ```js
+// const apples = 47;
+// const grapes = 135;
+// const total = apples + grapes;
+// console.log(total)
+// const diff = apples - grapes;
+// console.log(diff)
+// ```
 
-Виведи на екран загальну кількість яблук та винограду. Різницю яблук та винограду.
+// ## Example 2 - Комбіновані оператори
 
-```js
-const apples = 47;
-const grapes = 135;
-const total = ;
-console.log(total)
-const diff = ;
-console.log(diff)
-```
+// Заміни вираз перевизначення комбінованим оператором `+=`.
 
-## Example 2 - Комбіновані оператори
+// ```js
+// let students = 100;
+// students += 50;
+// console.log(students);
+// ```
 
-Заміни вираз перевизначення комбінованим оператором `+=`.
+// ## Example 3 - Пріоритет операторів
 
-```js
-let students = 100;
-students = students + 50;
-console.log(students);
-```
+// Розбери пріоритет операторів в інструкції привласнення значення змінної
+// `result`.
 
-## Example 3 - Пріоритет операторів
+// ```js
+// const result = 108 + 223 - 2 * 5;
+// console.log(result);
+// ```
 
-Розбери пріоритет операторів в інструкції привласнення значення змінної
-`result`.
+// ## Example 4 - Клас Math
 
-```js
-const result = 108 + 223 - 2 * 5;
-console.log(result);
-```
+// Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д. значення
+// змінної `value`. Використовуй методи `Math.floor()`, `Math.ceil()` та
+// `Math.round()`. Перевір що буде в консолі при значеннях `27.3` та `27.9`.
 
-## Example 4 - Клас Math
+// ```js
+// const value = 27.4;
 
-Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д. значення
-змінної `value`. Використовуй методи `Math.floor()`, `Math.ceil()` та
-`Math.round()`. Перевір що буде в консолі при значеннях `27.3` та `27.9`.
+// console.log(Math.round(value));
+// console.log(Math.floor(value));
+// console.log(Math.ceil(value));
+// ```
 
-```js
-const value = 27.5;
-```
+// Задача розрахувати кількість ітемів на сторінці
+// const total = 91;
+// const perPage = 10;
+// console.log(total / perPage); // -> 9.1 not correct
+// console.log(Math.ceil(total / perPage)); // -> 10 correct
 
-## Example 5 - Шаблонні рядки
+// ## Example 5 - Шаблонні рядки
 
-Склади фразу за допомогою шаблонних рядків `A has B bots in stock`, де A, B -
-змінні вставлені в рядок.
+// Склади фразу за допомогою шаблонних рядків `A has B bots in stock`, де A, B -
+// змінні вставлені в рядок.
 
-```js
-const companyName = 'Cyberdyne Systems';
-const repairBots = 150;
-const defenceBots = 50;
-const message = ``;
-console.log(message); // "Cyberdyne Systems has 200 bots in stock"
-```
+// ```js
+// const companyName = 'Cyberdyne Systems';
+// const repairBots = 150;
+// const defenceBots = 50;
+// const message = `${companyName} has ${repairBots + defenceBots} bots in stock"`;
+// console.log(message); // "Cyberdyne Systems has 200 bots in stock"
+// ```
 
-## Example 6 - Методи рядків та чейнінг
+// ## Example 6 - Методи рядків та чейнінг
 
-Напиши скрипт, який розраховує індекс маси тіла людини. Для цього
-необхідно розділити вагу в кілограмах на квадрат висоти людини у метрах.
+// Напиши скрипт, який розраховує індекс маси тіла людини. Для цього
+// необхідно розділити вагу в кілограмах на квадрат висоти людини у метрах.
 
-Вага та висота зберігаються у змінних `weight` та `height`, але не як числа, а в
-вигляді рядків (спеціально для завдання). Не цілі числа можуть бути задані у вигляді
-`24.7` або `24,7`, тобто як роздільник дробової частини може бути
-кома.
+// Вага та висота зберігаються у змінних `weight` та `height`, але не як числа, а в
+// вигляді рядків (спеціально для завдання). Не цілі числа можуть бути задані у вигляді
+// `24.7` або `24,7`, тобто як роздільник дробової частини може бути
+// кома.
 
-Індекс маси тіла необхідно округлити до однієї цифри після коми;
+// Індекс маси тіла необхідно округлити до однієї цифри після коми;
 
-```js
-let weight = '88,3';
-let height = '1.75';
+// ```js
+// let weight = '88,3';
+// let height = '1.75';
+// // Імперативний підхід
+// // Знайди індекс коми
+// const comaIndex = weight.indexOf(',');
+// console.log(comaIndex);
+// // Виріж рядок до коми + Виріж рядок після коми + Сконкатенуй рядок з крапкою
+// weight = `${weight.slice(0, comaIndex)}.${weight.slice(comaIndex + 1)}`;
+// console.log(weight);
 
-const bmi = ;
-console.log(bmi); // 28.8
-```
+// // Деклеративний підхід
+// let weight = '88,3'.replace(',', '.');
+// let height = '1.75'.replace(',', '.');
 
-## Example 7 - Оператори порівняння та приведення типів
+// const bmi = weight / height ** 2;
+// console.log(bmi.toFixed(1)); // 28.8
+// ```
 
-Яким буде результат виразів?
+// ## Example 7 - Оператори порівняння та приведення типів
 
-```js
-console.log(5 > 4);
+// Яким буде результат виразів?
 
-console.log(10 >= '7');
+// ```js
+// console.log(5 > 4);
 
-console.log('2' > '12');
+// console.log(10 >= '7');
 
-console.log('2' < '12');
+// console.log('2' > '12');
 
-console.log('4' == 4);
+// console.log('2' < '12');
 
-console.log('6' === 6);
+// console.log('4' == 4);
 
-console.log('false' === false);
+// console.log('6' === 6);
 
-console.log(1 == true);
+// console.log('false' === false);
 
-console.log(1 === true);
+// console.log(1 == true);
 
-console.log('0' == false);
+// console.log(1 === true);
 
-console.log('0' === false);
+// console.log('0' == false);
 
-console.log('Papaya' < 'papaya');
+// console.log('0' === false);
 
-console.log('Papaya' === 'papaya');
+// console.log('Papaya' < 'papaya');
 
-console.log(undefined == null);
+// console.log('Papaya' === 'papaya');
 
-console.log(undefined === null);
-```
+// console.log(undefined == null);
 
-## Example 8 - Логічні оператори
+// console.log(undefined === null);
+// ```
 
-Яким буде результат виразів?
+// ## Example 8 - Логічні оператори
 
-```js
-console.log(true && 3);
+// Яким буде результат виразів?
 
-console.log(false && 3);
+// ```js
+// console.log(true && 3);
 
-console.log(true && 4 && 'kiwi');
+// console.log(false && 3);
 
-console.log(true && 0 && 'kiwi');
+// console.log(true && 4 && 'kiwi');
 
-console.log(true || 3);
+// console.log(true && 0 && 'kiwi');
 
-console.log(true || 3 || 4);
+// console.log(true || 3);
 
-console.log(true || false || 7);
+// console.log(true || 3 || 4);
 
-console.log(null || 2 || undefined);
+// console.log(true || false || 7);
 
-console.log((1 && null && 2) > 0);
+// console.log(null || 2 || undefined);
 
-console.log(null || (2 && 3) || 4);
-```
+// console.log((1 && null && 2) > 0);
+// 1.  Побачив дужки, зрозумів приорітет: 1 && null && 2
+// 2. Перевіряє 1 && null --> null
+// 3. Перевіряє null && 2 -> null
+// 4. Перевіряє null > 0
+// 5. Повертає -> false
 
-## Example 9 - Значення за замовчуванням та оператор нульового злиття
+// console.log(null || (2 && 3) || 4);
+// 1. Побачив дужки, зрозумів приорітет: 2 && 3 -> 3
+// 2. Перевіряє null || 3 -> 3
+// 3. Повертає -> 3
+// ```
 
-Отрефактори код так, щоб у змінну `value` присвоювалося значення
-змінної `incomingValue`, якщо воно не рівне `undefined` або `null`. В
-іншому випадку має присвоюватися значення `defaultValue`. Перевір роботу
-скрипта для наступних значень змінної `incomingValue`: null, undefined, 0,
-false. Використовуй оператор `??` (nullish coalescing operator).
+// ## Example 9 - Значення за замовчуванням та оператор нульового злиття
 
-```js
-const incomingValue = 5;
-const defaultValue = 10;
-const value = incomingValue || defaultValue;
-console.log(value);
-```
+// Отрефактори код так, щоб у змінну `value` присвоювалося значення
+// змінної `incomingValue`, якщо воно не рівне `undefined` або `null`. В
+// іншому випадку має присвоюватися значення `defaultValue`. Перевір роботу
+// скрипта для наступних значень змінної `incomingValue`: null, undefined, 0,
+// false. Використовуй оператор `??` (nullish coalescing operator).
 
-## Example 10 - Оператор % та методи рядків
+// ```js
+// const incomingValue = 0;
+// const defaultValue = 10;
+// const value = incomingValue ?? defaultValue;
+// console.log(value);
 
-Напиши скрипт, який переведе значення `totalMinutes` (кількість хвилин) в
-рядок у форматі годин та хвилин `HH:MM`.
+//  ?? - перевіряє лівий операнд, якщо він не null і не undefined -> повертає його
+// ```
 
-- 70 покаже 01:10
-- 450 покаже 07:30
-- 1441 покаже 24:01
+// ## Example 10 - Оператор % та методи рядків
 
-```js
-const totalMinutes = 70;
+// Напиши скрипт, який переведе значення `totalMinutes` (кількість хвилин) в
+// рядок у форматі годин та хвилин `HH:MM`.
 
-const hours = Math.floor(totalMinutes / 60);
-const minutes = totalMinutes % 60;
-console.log(hours);
-console.log(minutes);
+// - 70 покаже 01:10
+// - 450 покаже 07:30
+// - 1441 покаже 24:01
 
-const doubleDigitHours = String(hours).padStart(2, 0);
-const doubleDigitMinutes = String(minutes).padStart(2, 0);
-console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
-```
+// ```js
+// const totalMinutes = 70;
+
+// const hours = Math.floor(totalMinutes / 60);
+// const minutes = totalMinutes % 60;
+// console.log(hours);
+// console.log(minutes);
+
+// const doubleDigitHours = String(hours).padStart(2, 0);
+// const doubleDigitMinutes = String(minutes).padStart(2, 0);
+// console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+// ```
