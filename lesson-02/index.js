@@ -164,7 +164,19 @@
 // - більше `24` , виводь рядок `"Overdue"`
 
 // ```js
-// const hours = 10;
+// const hours = 25;
+// let message = '';
+
+// if (hours < 17) {
+//   message= 'Pending';
+// } else if (hours > 24) {
+//   message = 'Overdue';
+// } else {
+//   message = 'Expires';
+
+// }
+
+// console.log(message);
 // ```
 
 // ## Example 9 - Дедлайн здачі проекту (if...else)
@@ -178,8 +190,21 @@
 // - Якщо до дедлайну 3+ днів - виведи рядок `"Дата у майбутньому"`
 
 // ```js
-// const daysUntilDeadline = 5;
+// const daysUntilDeadline = -2;
 // // Пиши код нижче за цей рядок
+// let message = 'Дата у майбутньому';
+
+// if (daysUntilDeadline === 2) {
+//   message = 'Післязавтра';
+// } else if (daysUntilDeadline === 1) {
+//   message = 'Завтра';
+// } else if (daysUntilDeadline === 0) {
+//   message = 'Сьогодні';
+// } else if (daysUntilDeadline < 0) {
+//   message = 'Дату здачі прострочено';
+// }
+
+// console.log(message);
 // ```
 
 // ## Example 10 - Дедлайн здачі проекту (switch)
@@ -187,18 +212,94 @@
 // Виконай рефакторинг коду задачі номер 5 використовуючи `switch`.
 
 // ```js
-// const daysUntilDeadline = 5;
+// const daysUntilDeadline = 0;
 
-// if (daysUntilDeadline === 0) {
-//   console.log('Сьогодні');
-// } else if (daysUntilDeadline === 1) {
-//   console.log('Завтра');
-// } else if (daysUntilDeadline === 2) {
-//   console.log('Післязавтра');
-// } else {
-//   console.log('Дата у майбутньому');
+// switch (daysUntilDeadline) {
+//   case 0:
+//     console.log('Сьогодні');
+//     break;
+//   case 1:
+//     console.log('Завтра');
+//     break;
+//   case 2:
+//     console.log('Післязавтра');
+//     break;
+
+//   default:
+//     console.log('Дата у майбутньому');
+//     break;
 // }
 // ```
+
+// ## Елементарні задачі на цикл while
+
+// ## // Задача 1
+// let counter = 0;
+
+// while (counter < 10) {
+//   console.log("counter: ", counter);
+//   counter += 1;
+// }
+
+// ## // Задача 1
+// let clientCounter = 18;
+// const maxClients = 25;
+
+// while (clientCounter <= maxClients) {
+//   console.log('clientCounter: ', clientCounter);
+//   clientCounter += 1;
+// }
+
+// ## Елементарна задача на цикл do...while
+
+// let password = "";
+
+// do {
+//   password = prompt("Введіть пароль довший 4-х символів", "");
+// } while (password.length < 5);
+
+// console.log("Ввели пароль: ", password);
+
+// ## Цикл for
+
+// ## // Задача 1
+// Порахуємо суму чисел до певного значення.
+
+// const target = 3;
+// let sum = 0;
+
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+// }
+
+// console.log(sum);
+
+// ## // Задача 2
+// Знайдемо число 3. Щойно виконається умова if, цикл припинить своє виконання(буде перерваний).
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
+
+//   if (i === 3) {
+//     console.log("Знайшли число 3, перериваємо виконання циклу");
+//     break;
+//   }
+// }
+
+// console.log("Лог після циклу");
+
+// ## // Задача 3
+// Використовуємо цикл для введення тільки непарних чисел. Для парних i спрацьовує continue,
+// виконання тіла припиняється і управління передається до наступної ітерації.
+
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+
+//   console.log("Непарне i: ", i); // 1, 3, 5, 7, 9
+// }
 
 // ## Example 11 - Цикл for
 
@@ -206,8 +307,15 @@
 // до `max`, але тільки якщо число кратне `5`.
 
 // ```js
-// const max = 100;
-// const min = 20;
+// const max = 102;
+// const min = 19;
+
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 5 !== 0) {
+//     continue;
+//   }
+//   console.log("i які кратні 5: ", i);
+// }
 // ```
 
 // ## Example 12 - Введення користувача та розгалуження
@@ -223,6 +331,22 @@
 
 // - Якщо введено пароль `"Я адмін"`, то вивести рядок `"Здрастуйте!"`
 // - Інакше виводити рядок `"Невірний пароль"`
+
+// const login = prompt('Введіть логін');
+// console.log(login);
+// if (login === 'Адмін') {
+//   const password = prompt('Введіть пароль');
+//   console.log(password);
+//   if (password === 'Я адмін') {
+//     alert('Здрастуйте!');
+//   } else {
+//     alert('Невірний пароль');
+//   }
+// } else if (login === '' || login === null) {
+//   console.log('Скасовано');
+// } else {
+//   console.log('Я вас не знаю');
+// }
 
 
 //  Додаткова задача зі switch
