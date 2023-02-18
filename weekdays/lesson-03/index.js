@@ -11,8 +11,25 @@
 // 6. Вставте «Country» та «Reggae» на початок масиву.
 
 // ```js
-// const genres = ;
-// ```
+// const genres = ['«Jazz»', '«Blues»'];
+// genres.push('«Рок-н-рол»');
+// // 3. Виведіть у консоль перший елемент масиву.
+// console.log(genres[0]);
+// // 4. Виведіть у консоль останній елемент масиву.
+// console.log(genres[genres.length - 1]);
+// // 4. Виведіть у консоль останній елемент масиву.
+// const genresNew = String(genres.slice(genres.length - 1));
+// console.log(genresNew);
+// // 5. Видаліть перший елемент та виведіть його в консоль.
+// console.log(genres.shift());;
+// console.log(genres);
+// // 5. ! Видаліть ОСТАННІЙ елемент та виведіть його в консоль.
+// console.log(genres.pop());;
+// console.log(genres);
+// // 6. Вставте «Country» та «Reggae» на початок масиву.
+// genres.unshift('«Country»', '«Reggae»');
+// console.log(genres);
+// // ```
 
 // ## Example 2 - Масиви та рядки
 
