@@ -11,7 +11,9 @@
 // 6. Вставте «Country» та «Reggae» на початок масиву.
 
 // ```js
+// // 1. Створіть масив `genres` з елементами «Jazz» та «Blues».
 // const genres = ['«Jazz»', '«Blues»'];
+// // 2. Додайте «Рок-н-рол» до кінця.
 // genres.push('«Рок-н-рол»');
 // // 3. Виведіть у консоль перший елемент масиву.
 // console.log(genres[0]);
@@ -93,7 +95,20 @@
 // символ пробілу. Скрипт повинен працювати для будь-якого рядка.
 
 // ```js
-// const string = 'Welcome to the future';
+// const string = 'Welcome to the three four future';
+
+// const words = string.trim().split(' ');
+// console.log(words);
+// const result = words.slice(1, -1).join(' ');
+// console.log(result);
+
+// // АБО - НЕ ДОРОБЛЕНА ДО КІНЦЯ!!!!!!!!!
+// let words2 = string.trim().split(' ');
+// console.log(words2);
+// for (let i = 1; i < words2.length - 1; i++) {
+//     const result2 = words2[i];
+//     console.log(result2);    
+// }
 // ```
 
 // ## Example 6 - Масиви та рядки
@@ -103,6 +118,8 @@
 
 // ```js
 // const string = 'Welcome to the future';
+// const reversedString = string.split('').reverse().join('');
+// console.log(reversedString);
 // ```
 
 // ## Example 7 - Сортування масиву із циклом
@@ -125,6 +142,14 @@
 
 // ```js
 // const numbers = [2, 17, 94, 1, 23, 37];
-// let min;
-// console.log(min); // 1
+// let min = numbers[0];
+// console.log('Firstly min: ', min); // 1
+
+// for (let i = 0; i < numbers.length; i++) {
+//     if (i < min) {
+//         min = numbers[i];
+//     }
+// }
+
+// console.log('Finally min: ', min); // 1
 // ```
