@@ -1,3 +1,4 @@
+//  Задача 1 ==============================================================================
 /**
  *?     Используя функцию if...else,
  *?     напишите код, который будет спрашивать:
@@ -18,7 +19,7 @@
 //   alert('Не знаєте! ECMAScript!');
 // }
 
-//Новый js==========================================
+//Задача 2 =================================================================
 
 /**
  *?      Напишите программу, которая получит от пользователя
@@ -28,35 +29,33 @@
  *?      70 === 01:10
  */
 
-// const whatSayUser = prompt(`Ввести число`);
-// const hours = String(Math.floor(whatSayUser / 60)).padStart(2, 0);
-// console.log(hours);
-// hours.padStart(2, 0);
-// const mins = String(whatSayUser % 60).padStart(2, 0);
-// console.log(mins);
-// hours.padStart(2, 0);
+// const minutes = prompt(`Ввести число`);
+// const hours = String(Math.floor(minutes / 60)).padStart(2, 0);
+// console.log('hours: ', hours);
+
+// const mins = String(minutes % 60).padStart(2, 0);
+// console.log('minutes: ', mins);
 
 // console.log(`${hours}:${mins}`);
+
+//  Задача 3 ====================================================================================
 
 /**
  *?     При помощи цикла for сложите все четные числа от  min до max
  */
 
-// const max = 50;
+// const max = 6;
 // const min = 0;
 // let summ = 0;
 
-// for (let i = min; i <= max; i +=1 ){
-
-//     if ( i % 2 === 0 ){
-//         summ += i;
-
+// for (let i = min; i <= max; i += 1) {
+//     if (i % 2 === 0) {
+//         summ += i; 
 //     }
-
 // }
 // console.log(summ);
-//  задача
-// =====================================================
+
+// Задача 4 ======================================================================================
 
 /**
 *?      Напишите код, который будет спрашивать
@@ -74,6 +73,21 @@
 *?      то вывести строку "Здравствуйте!"
 *?      иначе выводить строку "Неверный пароль!"
  */
+
+// const userLogin = prompt('Введите логин').trim();
+// if (userLogin === 'Админ') {
+//     const password = prompt('Введите пароль');
+//     const message = password === 'Я главный'
+//         ? 'Здравствуйте!'
+//         : 'Неверный пароль!';
+//     alert(message);
+// } else if (userLogin === null || userLogin === '') {
+//     console.log('Отменено');
+// } else {
+//     console.log('Я вас не знаю');
+// }
+
+//  АБО
 
 // const userLogin = prompt('Введите логин');
 
@@ -107,12 +121,28 @@
  */
 
 // let total = 0;
-// let totalNew = prompt('Enter number');
-// let modifiedTotalNew = Number(totalNew);
+// let number = Number(prompt('Enter number'));
 // do {
-//   if (modifiedTotalNew) {
-//     total += totalNew;
-//     modifiedTotalNew = Number(prompt('Enter number'));
-//   }
-// } while (modifiedTotalNew);
-// console.log(total);
+//     if (number) {
+//         total += number;
+//         number = Number(prompt('Enter number'));
+//     }
+// } while (number); // while (total); те саме що й while (userLogin === null || userLogin === '');
+// console.log('Sum of numbers is: ', total);
+
+// АБО
+
+// let inputValue = prompt('Enter number');
+// let check = false;
+// let total = 0;
+
+// do {
+//     if (inputValue) {
+//         check = true;
+//         total += Number(inputValue);
+//         inputValue = prompt('Enter number');
+//     } else {
+//         check = false;
+//         alert(`Sum of numbers is ${total}`);
+//     }
+// } while (check);
