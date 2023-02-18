@@ -38,7 +38,10 @@
 // розділені пробілом.
 
 // ```js
-// const values = '8 11';
+// const values = '12 11';
+// const valuesArr = values.split(' ');
+// const result = Number(valuesArr[0]) * Number(valuesArr[1]);
+// console.log(result);
 // ```
 
 // ## Example 3 - Перебір масиву
@@ -49,6 +52,18 @@
 
 // ```js
 // const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
+
+// // через цикл for
+// for (let i = 0; i < fruits.length; i++) {
+//     console.log(`${i + 1} : ${fruits[i]}`);
+// }
+
+// через цикл for...of
+// for (let element of fruits) {
+//     const i = fruits.indexOf(element);
+//     console.log(`${i + 1} : ${fruits[i]}`);
+// }
+
 // ```
 
 // ## Example 4 - Масиви та цикли
@@ -59,8 +74,16 @@
 // відповідність. Кількість імен та телефонів гарантовано однакова.
 
 // ```js
-// const names = 'Jacob,William,Solomon,Artemis';
+// const names = 'Jacob,William,Solomon,Artemis,Artemis2';
 // const phones = '89001234567,89001112233,890055566377,890055566300';
+
+// const namesArr = names.split(',');
+// const phonesArr = phones.split(',');
+
+// for (const name of namesArr) {
+//     const i = namesArr.indexOf(name);
+//     console.log(name, phonesArr[i]);
+// }
 // ```
 
 // ## Example 5 - Масиви та рядки
@@ -89,6 +112,10 @@
 
 // ```js
 // const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
+
+// console.log(langs.sort());
+// // Сортування в зворотньому порядку
+// console.log(langs.sort().reverse());
 // ```
 
 // ## Example 8 - Пошук елемента
