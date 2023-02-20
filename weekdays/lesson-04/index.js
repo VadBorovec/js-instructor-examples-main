@@ -13,19 +13,59 @@
 // Індекс маси тіла необхідно округлити до однієї цифри після коми;
 
 // ```js
+// function calcBMI(x, y) {
+//     return Number(x.replace(',', '.') / y.replace(',', '.')**2).toFixed(1);
+// }
+
 // const bmi = calcBMI('88,3', '1.75');
-// console.log(bmi); // 28.8 
+// console.log(bmi); // 28.8
 // ```
+
+// АБО ChatCPT
+// function calcBMI(weight, height) {
+//   const weightInKg = parseFloat(weight.replace(',', '.'));
+//   const heightInM = parseFloat(height.replace(',', '.')) / 100;
+//   const bmi = weightInKg / (heightInM * heightInM);
+//   return Math.round(bmi * 10) / 10;
+// }
+
+// const weight = '88,3';
+// const height = '175,0';
+// const bmi = calcBMI(weight, height);
+// console.log(`BMI: ${bmi}`);
 
 // ## Example 2 - Найменше з чисел
 
 // Напиши функцію `min(a,b)`, яка повертає найменше з чисел `a` та `b`.
 
 // ```js
+// function min(a, b) {
+//     let smallerNumber = a;
+//     if (a > b) {
+//         smallerNumber = b;
+//     }
+//     return smallerNumber;
+// }
+
+// // АБО ChatCPT
+// function min(a, b) {
+//   if (a < b) {
+//     return a;
+//   } else {
+//     return b;
+//   }
+// }
+
+// // АБО Тернарний оператор
+// function min(a, b) {
+//   return a < b ? a : b;
+// }
+// // Консоль ЛОГ
 // console.log(min(2, 5)); // 2
 // console.log(min(3, -1)); // -1
 // console.log(min(1, 1)); // 1
 // ```
+
 
 // ## Example 3 - Площа прямокутника
 
@@ -34,7 +74,17 @@
 // рядка. Значення гарантовано розділені пробілом.
 
 // ```js
-// function getRectArea(dimensions) {}
+// function getRectArea(dimensions) {
+//     const dimArr = dimensions.split(' ');
+//     return dimArr[0] * dimArr[1];
+// }
+
+// // АБО ChatCPT
+// function getRectArea(dimensions) {
+//   const [a, b] = dimensions.split(' ');
+//   const area = a * b;
+//   return area;
+// }
 
 // console.log(getRectArea('8 11'));
 // ```
