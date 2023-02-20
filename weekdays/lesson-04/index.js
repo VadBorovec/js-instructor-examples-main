@@ -100,7 +100,12 @@
 // буде виведено `1 - Mango`, а для індексу 2 виведе `3 - Ajax`.
 
 // ```js
-// function logItems(items) {}
+// // Chat GPT has the same solution
+// function logItems(items) {
+//     for (let i = 0; i < items.length; i++) {
+//         console.log(`${i + 1} : ${items[i]}`);
+//     }
+// }
 
 // logItems(['Mango', 'Poly', 'Ajax']);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
@@ -115,7 +120,16 @@
 // гарантовано однакова.
 
 // ```js
-// function printContactsInfo(names, phones) {}
+// // Chat GPT has the same solution
+// function printContactsInfo(names, phones) {
+//     const namesArr = names.split(',');
+//     // console.log(namesArr);
+//     const phonesArr = phones.split(',');
+//     // console.log(phonesArr);
+//     for (let i = 0; i < namesArr.length; i++) {
+//         console.log(`${namesArr[i] },${phonesArr[i] }`);
+//     }
+// }
 
 // printContactsInfo(
 //   'Jacob,William,Solomon,Artemis',
@@ -129,7 +143,19 @@
 // масиві.
 
 // ```js
-// function findLargestNumber(numbers) {}
+// // Chat GPT has the same solution
+// function findLargestNumber(numbers) {
+
+//     let largestNumber = numbers[0];
+
+//     for (let i = 1; i < numbers.length; i++) {
+//         const element = numbers[i];
+//         if (element > largestNumber) {
+//             largestNumber = element;
+//         }
+//     }
+//     return largestNumber;
+// }
 
 // console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
 // console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
@@ -141,7 +167,15 @@
 // і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
 
 // ```js
-// function calAverage() {}
+// // in cooperation with Chat GPT
+// function calAverage() {
+//     let sum = 0;
+//     for (let i = 0; i < arguments.length; i++) {
+//         const value = arguments[i];
+//         sum += value;
+//     }
+//     return sum / arguments.length;
+// }
 
 // console.log(calAverage(1, 2, 3, 4)); // 2.5
 // console.log(calAverage(14, 8, 2)); // 8
@@ -154,16 +188,15 @@
 // (кількість хвилин) у рядок у форматі годин та хвилин `HH:MM`.
 
 // ```js
-// const hours = Math.floor(totalMinutes / 60);
-// const minutes = totalMinutes % 60;
-// console.log(hours);
-// console.log(minutes);
+// // Chat GPT has the same solution
+// function formatTime(minutes) {
+//     const hours = Math.floor(minutes / 60);
+//     const mins = minutes % 60;
 
-// const doubleDigitHours = String(hours).padStart(2, 0);
-// const doubleDigitMinutes = String(minutes).padStart(2, 0);
-// console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
-
-// function formatTime(minutes) {}
+//     const doubleDigitHours = String(hours).padStart(2, 0);
+//     const doubleDigitMinutes = String(mins).padStart(2, 0);
+//     return `${doubleDigitHours}:${doubleDigitMinutes}`;
+// }
 
 // console.log(formatTime(70)); // "01:10"
 // console.log(formatTime(450)); // "07:30"
@@ -179,7 +212,33 @@
 // - `updateCourse(oldName, newName)` - змінює ім'я на нове
 
 // ```js
+// // in cooperation with Chat GPT
 // const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+// console.log(courses);
+
+// function addCourse(name) {
+//     if (courses.includes(name)) {
+//         return console.log('Ви вже маєте такий курс');;
+//     }
+//     courses.push(name);
+// }
+
+// function removeCourse(name) {
+//   const index = courses.indexOf(name);
+//   if (index === -1) {
+//     return console.log("Курс із таким ім'ям не знайдено");;
+//   }
+//   courses.splice(index, 1);
+// }
+
+// function updateCourse(oldName, newName) {
+//   const index = courses.indexOf(oldName);
+//   if (index === -1) {
+//     return console.log("Курс із таким ім'ям не знайдено");
+//   }
+//   courses[index] = newName;
+// }
+
 
 // addCourse('Express');
 // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
