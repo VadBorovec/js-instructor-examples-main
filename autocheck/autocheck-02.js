@@ -316,21 +316,406 @@
 // Виклик calculateEngravingPrice("Web-development is creative work", 40) повертає 160
 // Виклик calculateEngravingPrice("Web-development is creative work", 20) повертає 80
 
-function calculateEngravingPrice(message, pricePerWord) {
+// function calculateEngravingPrice(message, pricePerWord) {
+//    // Change code below this line
+//     const arr = message.split(' ');
+//     console.log('Довжина массиву: ', arr.length);
+//     const total = arr.length * pricePerWord;
+//     return total;
+//    // Change code above this line
+// }
+
+// let res = calculateEngravingPrice("JavaScript is in my blood", 10);
+// console.log(res);
+// res = calculateEngravingPrice("JavaScript is in my blood", 20);
+// console.log(res);
+// res = calculateEngravingPrice("Web-development is creative work", 40);
+// console.log(res);
+// res = calculateEngravingPrice("Web-development is creative work", 20);
+// console.log(res);
+
+// ====================================================================================================
+
+// 12
+
+// Доповни код функції makeStringFromArray(array, delimiter) таким чином,
+// щоб вона повертала у змінній string результат з'єднання елементів масиву array з роздільником delimiter - рядок.
+
+// Оголошена функція makeStringFromArray(array, delimiter)
+// Виклик makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " ") повертає "Mango hurries to the train"
+// Виклик makeStringFromArray(["M", "a", "n", "g", "o"], "")) повертає "Mango"
+// Виклик makeStringFromArray(["top", "picks", "for", "you"], "_") повертає "top_picks_for_you"
+
+// function makeStringFromArray(array, delimiter) {
+//   let string;
+//   // Change code below this line
+//     string = array.join(delimiter);
+//   // Change code above this line
+//   return string;
+// }
+
+// let res = makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " ");
+// console.log(res);
+// res = makeStringFromArray(["M", "a", "n", "g", "o"], "");
+// console.log(res);
+// res = makeStringFromArray(["top", "picks", "for", "you"], "_");
+// console.log(res);
+
+// ====================================================================================================
+
+// 13
+
+// Термін slug - це людино - зрозумілий унікальний ідентифікатор, який використовується
+// у веб - розробцідля створення читабельних URL - адрес.
+
+// Наприклад, замість того, щоб користувач побачив в адресному рядку mysite.com / posts / 1q8fh74tx,
+// можна зробити slug з назви статті.В результаті адреса буде приємнішою для сприйняття:
+//     mysite.com / posts / arrays -for-begginers.
+
+// Увага
+// Slug - це завжди рядок у нижньому регістрі, слова якого розділені тире.
+
+// Напиши функцію slugify(title), яка приймає заголовок статті, параметр title, і повертає slug, створений з цього рядка.
+
+// Значенням параметра title будуть рядки, слова яких розділені лише пробілами
+// Усі символи slug повинні бути у нижньому регістрі
+// Всі слова slug повинні бути розділені тире
+
+// Оголошена функція slugify(title)
+// Виклик slugify("Arrays for begginers") повертає "arrays-for-begginers"
+// Виклик slugify("English for developer") повертає "english-for-developer"
+// Виклик slugify("Ten secrets of JavaScript") повертає "ten-secrets-of-javascript"
+// Виклик slugify("How to become a JUNIOR developer in TWO WEEKS") повертає "how-to-become-a-junior-developer-in-two-weeks"
+
+// (ЧОМУ АВТОПЕРЕВІРКА НЕ ПРИЙНЯЛА МІЙ ВАРІАНТ ?)
+// function slugify(title) {
+//   // Change code below this line
+//     // Мій варіант
+//     let slug = title.toLowerCase().replaceAll(" ", "-");
+
+//     //  Варіант ChatGPT
+//     const words = title.toLowerCase().split(' ');
+//     const slug = words.join('-');
+
+//     return slug;
+//   // Change code above this line
+// }
+
+// let res = slugify("Arrays for begginers");
+// console.log(res);
+// res = slugify("English for developer");
+// console.log(res);
+// res = slugify("Ten secrets of JavaScript");
+// console.log(res);
+// res = slugify("How to become a JUNIOR developer in TWO WEEKS");
+// console.log(res);
+
+// ====================================================================================================
+
+// 14
+
+// Доповни код таким чином, щоб змінні містили часткові копії вихідного масиву fruits.
+
+// firstTwoEls - масив із перших двох елементів
+// nonExtremeEls - масив з усіх елементів, крім першого та останнього
+// lastThreeEls - масив із трьох останніх елементів
+
+// Оголошена змінна fruits
+// Значення змінної fruits - це масив ["apple", "plum", "pear", "orange", "banana"]
+// Оголошена змінна firstTwoEls
+// Значення змінної firstTwoEls - це масив ["apple", "plum"]
+// Оголошена змінна nonExtremeEls
+// Значення змінної nonExtremeEls - це масив ["plum", "pear", "orange"]
+// Оголошена змінна lastThreeEls
+// Значення змінної lastThreeEls - це масив ["pear", "orange", "banana"]
+// Змінній lastThreeEls присвоєна копія частини масиву fruits після застосування методу slice з правильними аргументами
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// // Change code below this line
+// const firstTwoEls = console.log(fruits.slice(0, 2));;
+// const nonExtremeEls = console.log(fruits.slice(1, -1));;
+// const lastThreeEls = console.log(fruits.slice(-3));;
+
+// // OR
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, -1);
+// const lastThreeEls = fruits.slice(-3);
+
+// ====================================================================================================
+
+// 15
+
+// Доповни код таким чином, щоб у змінній allClients утворився масив усіх елементів масивів oldClients і newClients.
+
+// Оголошена змінна oldClients
+// Значення змінної oldClients - це масив ["Mango", "Ajax", "Poly", "Kiwi"]
+// Оголошена змінна newClients
+// Значення змінної newClients - це масив ["Peach", "Houston"]
+// Оголошена змінна allClients
+// Значення змінної allClients - це масив ["Mango", "Ajax", "Poly", "Kiwi", "Peach", "Houston"]
+// Змінній allClients присвоєний масив після застосування методу concat з правильними аргументами
+
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+
+// const allClients = oldClients.concat(newClients); // Change this line
+// console.log(allClients);
+
+// ====================================================================================================
+
+// 16
+
+// Напиши функцію makeArray(firstArray, secondArray, maxLength) для створення нового масивуз усіма елементами
+// двох вихідних firstArray і secondArray.Параметр maxLength містить максимально допустиму довжину нового масиву.
+
+// Якщо кількість елементів нового масиву більша за maxLength, функція повинна повернути копію масиву довжиною
+// maxLength елементів.В іншому випадку функція повинна повернути новий масив повністю.
+
+// Оголошена функція makeArray(firstArray, secondArray, maxLength)
+// Виклик makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3) повертає ["Mango", "Poly", "Ajax"]
+// Виклик makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4) повертає ["Mango", "Poly", "Houston", "Ajax"]
+// Виклик makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3) повертає ["Mango", "Ajax", "Chelsea"]
+// Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2) повертає ["Earth", "Jupiter"]
+// Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4) повертає ["Earth", "Jupiter", "Neptune", "Uranus"]
+// Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0) повертає []
+// Виклик функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line
+//     let newArr = firstArray.concat(secondArray);
+//     if (newArr.length > maxLength) {
+//         // My option
+//         newArr.length = maxLength
+//         // ChatGPT option
+//         // return newArr.slice(0, maxLength);
+//     }
+//     return newArr;
+//     // Change code above this line
+//   }
+
+//   let res = makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// console.log(res);
+// res = makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+// console.log(res);
+// res = makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3);
+// console.log(res);
+// res = makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2);
+// console.log(res);
+// res = makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4);
+// console.log(res);
+// res = makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);
+// console.log(res);
+
+// ====================================================================================================
+
+// 17
+
+// Доповни цикл for таким чином, щоб він логував всі цілі числа в діапазоні від start до end включно.
+
+// Оголошена змінна start
+// Значення змінної start - це число 3
+// Оголошена змінна end
+// Значення змінної end - це число 7
+// Оголошена змінна i - лічильник циклу
+// Початкове значення змінної i дорівнює 3
+// Умова циклу приводиться до true доти, доки i менше або дорівнює 7
+// На кожній ітерації значення змінної i збільшується на одиницю
+// Виведення у консоль змінної i покаже числа 3, 4, 5, 6, 7
+
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i +=1 ) { // Change this line
+//   console.log(i);
+// }
+
+// ====================================================================================================
+
+// 18
+
+// Напиши функцію calculateTotal(number), яка приймає ціле число(параметр number) і повертаєсуму всіх цілих
+// чисел від одиниці і до цього числа.Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+
+// Оголошена функція calculateTotal(number)
+// Виклик функції calculateTotal(1) повертає 1
+// Виклик функції calculateTotal(3) повертає 6
+// Виклик функції calculateTotal(7) повертає 28
+// Виклик функції calculateTotal(18) повертає 171
+// Виклик функції calculateTotal(24) повертає 300
+// Виклик функції calculateTotal() з випадковим числом повертає правильне значення
+
+// function calculateTotal(number) {
+//  // Change code below this line
+//     let sum = 0;
+//     for (let i = 1; i <= number; i += 1) {
+//         sum += i;
+//     }
+//     return sum;
+//   // Change code above this line
+// }
+
+// let res = calculateTotal(1);
+// console.log(res);
+// res = calculateTotal(3);
+// console.log(res);
+// res = calculateTotal(7);
+// console.log(res);
+// res = calculateTotal(18);
+// console.log(res);
+// res = calculateTotal(24);
+// console.log(res);
+
+// ====================================================================================================
+
+// 19
+
+// Доповни код циклу for таким чином, щоб він послідовно логував усі елементи масиву fruits.
+
+// Оголошена змінна fruits
+// Значення змінної fruits - це масив ["apple", "plum", "pear", "orange"]
+// Оголошена змінна i - лічильник циклу
+// Початкове значення змінної i дорівнює 0
+// Умова циклу приводиться до true доти, доки i менше за 4
+// На кожній ітерації значення змінної i збільшується на одиницю
+// В тілі циклу for оголошується змінна const fruit і цій змінній присвоюється значення - елемент масиву
+// В тілі циклу for використовується виведення у консоль змінної fruit
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// ====================================================================================================
+
+// 20
+
+// Напиши функцію calculateTotalPrice(order), яка приймає один параметр order - масив чисел, і обчислює загальну суму його елементів.
+// Загальна сума елементів повинна зберігатися у змінній total, яка повертається як результат роботи функції.
+
+// Оголошена функція calculateTotalPrice(order)
+// Виклик функції calculateTotalPrice([12, 85, 37, 4]) повертає 138
+// Виклик функції calculateTotalPrice([164, 48, 291]) повертає 503
+// Виклик функції calculateTotalPrice([412, 371, 94, 63, 176]) повертає 1116
+// Виклик функції calculateTotalPrice() з випадковим масивом повертає правильне значення
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//     for (let i = 0; i < order.length; i+= 1) {
+//         const element = order[i];
+//         total += element;
+//     }
+//     return total;
+//   // Change code above this line
+//   return total;
+// }
+
+// let res = calculateTotalPrice([12, 85, 37, 4]);
+// console.log(res);
+// res = calculateTotalPrice([164, 48, 291]);
+// console.log(res);
+// res = calculateTotalPrice([412, 371, 94, 63, 176]);
+// console.log(res);
+
+// ====================================================================================================
+
+// 21
+
+// Напиши функцію findLongestWord(string), яка приймає довільний рядок, що складається тільки зі слів,
+// розділених пробілом(параметр string), і повертає найдовше слово в цьому рядку.
+
+// Оголошена функція findLongestWord(string)
+// Виклик функції findLongestWord("The quick brown fox jumped over the lazy dog") повертає jumped
+// Виклик функції findLongestWord("Google do a roll") повертає Google
+// Виклик функції findLongestWord("May the force be with you") повертає force
+// Виклик функції findLongestWord() з випадковим рядком повертає правильне значення
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//     const stringArr = string.split(' ');
+//     let longestWord = stringArr[0];
+//     for (let i = 0; i < stringArr.length; i+= 1) {
+//         const element = stringArr[i];
+//         if (longestWord.length < element.length) {
+//             longestWord = element;
+//         }
+//     }
+//     return longestWord;
+//   // Change code above this line
+// }
+
+// let res = findLongestWord("The quick brown fox jumped over the lazy dog");
+// console.log(res);
+// res = findLongestWord("Google do a roll");
+// console.log(res);
+// res = findLongestWord("May the force be with you");
+// console.log(res);
+
+// ====================================================================================================
+
+// 22
+
+// Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала
+// масив усіх цілих чисел від значення min до max.
+
+// Оголошена функція createArrayOfNumbers(min, max)
+// Виклик функції createArrayOfNumbers(1, 3) повертає [1, 2, 3]
+// Виклик функції createArrayOfNumbers(14, 17) повертає [14, 15, 16, 17]
+// Виклик функції createArrayOfNumbers(29, 34) повертає [29, 30, 31, 32, 33, 34]
+// Виклик функції createArrayOfNumbers() з випадковими min і max повертає правильний масив
+// В циклі for використовувався метод push
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//     for (let i = min; i <= max; i ++) {
+//         numbers.push(i);
+//     }
+//   // Change code above this line
+//   return numbers;
+// }
+
+// let res = createArrayOfNumbers(1, 3);
+// console.log(res);
+// res = createArrayOfNumbers(14, 17);
+// console.log(res);
+// res = createArrayOfNumbers(29, 34);
+// console.log(res);
+
+// ====================================================================================================
+
+// 23
+
+// Напиши функцію filterArray(numbers, value), яка приймає масив чисел(параметр numbers) і повертає новий масив,
+// в якому будуть тільки ті елементи масиву numbers, які більші за значення параметра value(число).
+
+// Оголошена функція filterArray(numbers, value)
+// Виклик функції filterArray([1, 2, 3, 4, 5], 3) повертає [4, 5]
+// Виклик функції filterArray([1, 2, 3, 4, 5], 4) повертає [5]
+// Виклик функції filterArray([1, 2, 3, 4, 5], 5) повертає []
+// Виклик функції filterArray([12, 24, 8, 41, 76], 38) повертає [41, 76]
+// Виклик функції filterArray([12, 24, 8, 41, 76], 20) повертає [24, 41, 76]
+// Виклик функції filterArray() з випадковим масивом і числом повертає правильний масив
+// В циклі for використовувався метод push
+    
+function filterArray(numbers, value) {
    // Change code below this line
-    const array = message.split(' ');
-    // return array.length;
-    return array.length * pricePerWord;
-   // Change code above this line
+
+
+
+  // Change code above this line
 }
 
-let res = calculateEngravingPrice("JavaScript is in my blood", 10);
+let res = filterArray([1, 2, 3, 4, 5], 3);
 console.log(res);
-calculateEngravingPrice("JavaScript is in my blood", 20);
+res = filterArray([1, 2, 3, 4, 5], 4);
 console.log(res);
-calculateEngravingPrice("Web-development is creative work", 40);
+res = filterArray([1, 2, 3, 4, 5], 4);
 console.log(res);
-calculateEngravingPrice("Web-development is creative work", 20);
+res = filterArray([12, 24, 8, 41, 76], 38);
 console.log(res);
-
-// Запитати в ментора за 11 завдання
+res = filterArray([12, 24, 8, 41, 76], 20);
+console.log(res);
