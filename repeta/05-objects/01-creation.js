@@ -173,3 +173,7 @@ for (const book of books) {
   console.log(book.author);
   console.log(book.rating);
 }
+
+// Об'єкти
+
+
