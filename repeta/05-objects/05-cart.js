@@ -23,14 +23,14 @@ const cart = {
     decreaseQuantity(productName) { },
 };
 
-console.table(cart.getItems());
+// console.table(cart.getItems());
 
 cart.add({ name: 'apple', price: 50 });
 cart.add({ name: 'lemon', price: 60 });
 cart.add({ name: 'lemon', price: 60 });
 cart.add({ name: 'strawbrry', price: 110 });
 
-console.table(cart.getItems());
+// console.table(cart.getItems());
 
 // cart.remove('apple');
 // console.table(cart.getItems());
