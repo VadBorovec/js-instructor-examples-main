@@ -549,13 +549,500 @@
 // Оголошена змінна rgbColors
 // Значення змінної rgbColors - це масив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
 
-const colors = [
-  { hex: "#f44336", rgb: "244,67,54" },
-  { hex: "#2196f3", rgb: "33,150,243" },
-  { hex: "#4caf50", rgb: "76,175,80" },
-  { hex: "#ffeb3b", rgb: "255,235,59" },
-];
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
 
-const hexColors = [];
-const rgbColors = [];
+// console.log(colors);
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// ==============================================================================
+// 18
+
+// Напиши функцію getProductPrice(productName), яка приймає один параметр productName - назва продукту.
+// Функція шукає об'єкт продукту з таким ім'ям(властивість name) в масиві products і повертає його
+// ціну(властивість price).Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
+
+// Оголошена функція getProductPrice(productName).
+// Виклик getProductPrice("Radar") повертає 1300.
+// Виклик getProductPrice("Grip") повертає 1200.
+// Виклик getProductPrice("Scanner") повертає 2700.
+// Виклик getProductPrice("Droid") повертає 400.
+// Виклик getProductPrice("Engine") повертає null.
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return `Price of ${product.name} is ${product.price}`;
+//     }
+//   }
+//   return null;
+//   // Change code above this line
+// }
+
+// let res = getProductPrice("Radar");
+// console.log(res);
+// res = getProductPrice("Grip");
+// console.log(res);
+// res = getProductPrice("Scanner");
+// console.log(res);
+// res = getProductPrice("Droid");
+// console.log(res);
+// res = getProductPrice("Engine");
+// console.log(res);
+
+// ==============================================================================
+// 19
+
+// Напиши функцію getAllPropValues(propName), яка приймає один параметр propName - ім'я (ключ) властивості.
+// Функція повинна повернути масив всіх значень властивості з таким ім'ям з кожного об'єкта в масиві products.
+// Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна повернути порожній масив.
+
+// Оголошена функція getAllPropValues(propName)
+// Виклик getAllPropValues("name") повертає ["Radar", "Scanner", "Droid", "Grip"]
+// Виклик getAllPropValues("quantity") повертає [4, 3, 7, 9]
+// Виклик getAllPropValues("price") повертає [1300, 2700, 400, 1200]
+// Виклик getAllPropValues("category") повертає []
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const allPropValues = [];
+//   for (const product of products) {
+//     const keys = Object.keys(product);
+//     if (keys.includes(propName)) {
+//       allPropValues.push(product[propName]);
+//     }
+//   }
+//   return allPropValues;
+//   // Change code above this line
+// }
+
+// let res = getAllPropValues("name");
+// console.log(res);
+// res = getAllPropValues("quantity");
+// console.log(res);
+// res = getAllPropValues("price");
+// console.log(res);
+// res = getAllPropValues("category");
+// console.log(res);
+
+// ==============================================================================
+// 20
+
+// Напиши функцію calculateTotalPrice(productName), яка приймає один параметр productName - назва товару.
+// Функція повинна повернути загальну вартість(ціна * кількість) товару з таким ім'ям з масиву products.
+
+// Оголошена функція calculateTotalPrice(productName)
+// Виклик calculateTotalPrice("Blaster") повертає 0
+// Виклик calculateTotalPrice("Radar") повертає 5200
+// Виклик calculateTotalPrice("Droid") повертає 2800
+// Виклик calculateTotalPrice("Grip") повертає 10800
+// Виклик calculateTotalPrice("Scanner") повертає 8100
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   let totalPrice = 0;
+//   for (const product of products) {
+//     const value = Object.values(product);
+//     // console.log(value);
+//     if (value.includes(productName)) {
+//       // console.log(`Includes: ${productName} with price ${product['price']} and quantity ${product.quantity}`);
+      
+//       totalPrice = product.price * product.quantity;
+//       return totalPrice;
+//       break;
+//     }
+//   }
+//   return totalPrice;
+// }
+
+// // OR
+// function calculateTotalPrice(productName) {
+//   let totalPrice = 0;
+//   for (const product of products) {
+//     if (productName === product.name) {
+//       totalPrice = product.price * product.quantity;
+//       break;
+//     }
+//   }
+//   return totalPrice;
+// }
+
+// let res = calculateTotalPrice("Blaster");
+// console.log(res);
+// res = calculateTotalPrice("Radar");
+// console.log(res);
+// res = calculateTotalPrice("Droid");
+// console.log(res);
+// res = calculateTotalPrice("Grip");
+// console.log(res);
+// res = calculateTotalPrice("Scanner");
+// console.log(res);
+
+// ==============================================================================
+// 21
+
+// Надійшов триденний прогноз максимальних температур і ми рахуємо середню температуру за три дні
+// (meanTemperature).Заміни оголошення змінних yesterday, today і tomorrow однією операцією
+// деструктуризації властивостей об'єкта highTemperatures.
+
+// Оголошена змінна highTemperatures
+// Значення змінної highTemperatures - це об'єкт
+// Оголошена змінна yesterday за допомогою деструктуризації
+// Значення змінної yesterday - це число 28
+// Оголошена змінна today за допомогою деструктуризації
+// Значення змінної today - це число 26
+// Оголошена змінна tomorrow за допомогою деструктуризації
+// Значення змінної tomorrow - це число 33
+// Оголошена змінна meanTemperature
+// Значення змінної meanTemperature - це число 29
+// Використовується синтаксис деструктуризації об'єкта highTemperatures
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const { yesterday, today, tomorrow } = highTemperatures;
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// console.log(meanTemperature);
+
+// ==============================================================================
+// 22
+
+// У прогнозі максимальних температур також може бути необов'язкова властивість icon - іконка погоди.
+// Заміни оголошення змінних yesterday, today, tomorrow і icon однією операцією деструктуризації
+// властивостей об'єкта highTemperatures. Задай значення за замовчуванням для icon -
+// рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+
+// Оголошена змінна highTemperatures
+// Значення змінної highTemperatures - це об'єкт
+// Оголошена змінна highTemperatures
+// Значення змінної highTemperatures - це об'єкт
+// Оголошена змінна yesterday за допомогою деструктуризації
+// Значення змінної yesterday - це число 28
+// Оголошена змінна today за допомогою деструктуризації
+// Значення змінної today - це число 26
+// Оголошена змінна tomorrow за допомогою деструктуризації
+// Значення змінної tomorrow - це число 33
+// Оголошена змінна icon за допомогою деструктуризації
+// Значення змінної icon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+// Використовується деструктуризація об'єкта
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {
+//   yesterday,
+//   today,
+//   tomorrow,
+//   icon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+// // const icon = highTemperatures.icon;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// console.log(meanTemperature);
+
+// ==============================================================================
+// 23
+
+// Заміни оголошення змінних highYesterday, highToday, highTomorrow і highIcon однією операцією деструктуризації
+// властивостей об'єкта highTemperatures. Задай значення за замовчуванням для highIcon -
+// рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+
+// Оголошена змінна highTemperatures
+// Значення змінної highTemperatures - це об'єкт
+// Оголошена змінна highYesterday
+// Значення змінної highYesterday - це число 28
+// Оголошена змінна highToday
+// Значення змінної highToday - це число 26
+// Оголошена змінна highTomorrow
+// Значення змінної highTomorrow - це число 33
+// Оголошена змінна highIcon
+// Значення змінної highIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+// Використовується деструктуризація об'єкта
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   icon: highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+// // const highYesterday = highTemperatures.yesterday;
+// // const highToday = highTemperatures.today;
+// // const highTomorrow = highTemperatures.tomorrow;
+// // const highIcon = highTemperatures.icon;
+
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+// console.log(meanTemperature);
+
+// ==============================================================================
+// 24
+
+// Виконай рефакторинг циклу for...of таким чином, щоб в ньому використовувалася деструктуризація об'єкта.
+
+// Оголошена змінна colors
+// Значення змінної colors - це масив
+// Оголошена змінна hexColors
+// Значення змінної hexColors - це масив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
+// Оголошена змінна rgbColors
+// Значення змінної rgbColors - це масив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
+// Для перебирання масиву використовується цикл for...of
+// В циклі for...of використовується деструктуризація об'єкта
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const { hex, rgb } of colors) {
+//   // const { hex, rgb } = color;
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// ==============================================================================
+// 25
+
+// Ми отримали прогноз погоди на два дні, з мінімальними і максимальними температурами,
+// а також необов'язковими іконками. Заміни оголошення всіх змінних однією операцією
+// деструктуризації властивостей об'єкта forecast.Задай значення за замовчуванням для іконок,
+// змінних todayIcon і tomorrowIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+
+// Оголошена змінна forecast
+// Значення змінної forecast - це об'єкт
+// Оголошена змінна highToday за допомогою деструктуризації
+// Значення змінної highToday - це число 32
+// Оголошена змінна lowToday за допомогою деструктуризації
+// Значення змінної lowToday - це число 28
+// Оголошена змінна todayIcon за допомогою деструктуризації
+// Значення змінної todayIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg"
+// Оголошена змінна highTomorrow за допомогою деструктуризації
+// Значення змінної highTomorrow - це число 31
+// Оголошена змінна lowTomorrow за допомогою деструктуризації
+// Значення змінної lowTomorrow - це число 27
+// Оголошена змінна tomorrowIcon за допомогою деструктуризації
+// Значення змінної tomorrowIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+// Використовується синтаксис деструктуризації об'єкта highTemperatures
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+
+// const {
+//   today: {
+//     high: highToday,
+//     low: lowToday,
+//     icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+//   tomorrow: {
+//     high: highTomorrow,
+//     low: lowTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+// } = forecast;
+
+// // const highToday = forecast.today.high;
+// // const lowToday = forecast.today.low;
+// // const todayIcon = forecast.today.icon;
+
+// // const highTomorrow = forecast.tomorrow.high;
+// // const lowTomorrow = forecast.tomorrow.low;
+// // const tomorrowIcon = forecast.tomorrow.icon;
+
+// console.log(highToday);
+// console.log(lowToday);
+// console.log(todayIcon);
+// console.log(highTomorrow);
+// console.log(lowTomorrow);
+// console.log(tomorrowIcon);
+
+// ==============================================================================
+// 26
+
+// Функція calculateMeanTemperature(forecast) приймає один параметр forecast -
+// об'єкт температур на два дні наступного формату.
+
+// {
+//   today: { low: 10, high: 20 },
+//   tomorrow: { low: 20, high: 30 }
+// }
+
+// Заміни оголошення змінних todayLow, todayHigh, tomorrowLow і tomorrowHigh однією операцією
+// деструктуризації властивостей об'єкта forecast.
+
+// Оголошена функція calculateMeanTemperature(forecast)
+// В тілі функції використовується деструктуризація об'єкта
+// В тілі функції оголошена змінна todayHigh за допомогою деструктуризації
+// В тілі функції оголошена змінна todayLow за допомогою деструктуризації
+// В тілі функції оголошена змінна tomorrowLow за допомогою деструктуризації
+// В тілі функції оголошена змінна tomorrowHigh за допомогою деструктуризації
+// Виклик calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }) повертає 28.5
+// Виклик calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }) повертає 37
+
+// // Change code below this line
+// function calculateMeanTemperature({
+//   today: {
+//     low: todayLow,
+//     high: todayHigh,
+//   },
+//   tomorrow: {
+//     low: tomorrowLow,
+//     high: tomorrowHigh,
+//   },
+// }) {
+  
+//   // const {
+//   //   today: {
+//   //     low: todayLow,
+//   //     high: todayHigh,
+//   //   },
+//   //   tomorrow: {
+//   //     low: tomorrowLow,
+//   //     high: tomorrowHigh,
+//   //   },
+//   // } = forecast;
+
+//   // const todayLow = forecast.today.low;
+//   // const todayHigh = forecast.today.high;
+//   // const tomorrowLow = forecast.tomorrow.low;
+//   // const tomorrowHigh = forecast.tomorrow.high;
+
+//   // Change code above this line
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+// console.log(calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } }));
+// console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }));
+
+// ==============================================================================
+// 27
+
+// У змінній scores зберігається масив результатів тестування.Використовуючи розподіл і методи
+// Math.max() і Math.min(), доповни код таким чином, щоб у змінній bestScore був найвищий бал, а у
+// worstScore - найнижчий.
+
+// Оголошена змінна scores
+// Значення змінної scores - це масив [89, 64, 42, 17, 93, 51, 26]
+// Оголошена змінна bestScore
+// Значення змінної bestScore - це число 93
+// Оголошена змінна worstScore
+// Значення змінної worstScore - це число 17
+// Для передачі аргументів методу Math.max() використовується синтаксис ... на масиві scores
+// Для передачі аргументів методу Math.min() використовується синтаксис ... на масиві scores
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore);
+// console.log(worstScore);
+
+// ==============================================================================
+// 28
+
+// У змінних firstGroupScores, secondGroupScores і thirdGroupScores зберігаються результати тестування
+// окремих груп.Використовуючи розподіл, доповни код таким чином, щоб:
+
+// У змінній allScores зберігався масив всіх результатів від першої до третьої групи.
+// У змінній bestScore був найвищий загальний бал.
+// У змінній worstScore був найнижчий загальний бал.
+
+// Оголошена змінна firstGroupScores
+// Значення змінної firstGroupScores - це масив [64, 42, 93]
+// Оголошена змінна secondGroupScores
+// Значення змінної secondGroupScores - це масив [89, 14, 51, 26]
+// Оголошена змінна thirdGroupScores
+// Значення змінної thirdGroupScores - це масив [29, 47, 18, 97, 81]
+// Оголошена змінна allScores.
+// Значення змінної allScores - це масив [64, 42, 93, 89, 14, 51, 26, 29, 47, 18, 97, 81]
+// Оголошена змінна bestScore
+// Значення змінної bestScore - це число 97
+// Оголошена змінна worstScore
+// Значення змінної worstScore - це число 14
+// Для присвоєння значення змінної allScores використовувався синтаксис ... для заповнення масиву
+// Для передачі аргументів методу Math.max() використовується синтаксис ... на масиві allScores
+// Для передачі аргументів методу Math.min() використовується синтаксис ... на масиві allScores
+
+const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
 // Change code below this line
+const allScores = [];
+const bestScore = allScores;
+const worstScore = allScores;
