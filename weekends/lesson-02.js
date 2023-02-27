@@ -7,8 +7,24 @@
 // const res = prompt("Input your name");
 // const str = ["Peter", "John", "Igor", "Sasha"];
 
+// function login(str, res) {
+//     if (!res) {
+//         console.log('Відміна введення');
+//         return;
+//     }
+//     return str.includes(res) ? console.log('Доступ дозволено') : console.log('Доступу немає');
+// }
+
+// login(str, res);
+
 //TODO:==============================
 // Напишіть функцію min(a,b), яка повертає менше із чисел a і b.
+
+// function min() {
+//   return Math.min(...arguments);
+// }
+
+// console.log(min(4, 8, 15, 222));
 
 //TODO:==============================
 // // Що виведе наступний код?
@@ -25,14 +41,14 @@
 // Замініть значення «Блюз» на «Класика».
 // Видалить перший елемент масиву і виведіть його в консоль.
 // Вставте «Реп» і «Реггі» на початок масиву.
-// const styles = ['jazz', 'blues'];
-// styles.push('rock-n-roll');
-// console.log(styles.indexOf('blues'));
-// styles.splice(1, 1, 'classic');
-// console.log(styles.shift());
-// console.log(styles);
-// styles.unshift('rap', 'reggie');
-// console.log(styles);
+const styles = ['jazz', 'blues'];
+styles.push('rock-n-roll');
+console.log(styles.indexOf('blues'));
+styles.splice(1, 1, 'classic');
+console.log(styles.shift());
+console.log(styles);
+styles.unshift('rap', 'reggie');
+console.log(styles);
 
 //TODO:==========================
 // Напишіть функцію min(a, b), яка повертає
