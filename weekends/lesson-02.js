@@ -41,23 +41,37 @@
 // Замініть значення «Блюз» на «Класика».
 // Видалить перший елемент масиву і виведіть його в консоль.
 // Вставте «Реп» і «Реггі» на початок масиву.
-const styles = ['jazz', 'blues'];
-styles.push('rock-n-roll');
-console.log(styles.indexOf('blues'));
-styles.splice(1, 1, 'classic');
-console.log(styles.shift());
-console.log(styles);
-styles.unshift('rap', 'reggie');
-console.log(styles);
+// const styles = ['jazz', 'blues'];
+// styles.push('rock-n-roll');
+// console.log(styles.indexOf('blues'));
+// styles.splice(1, 1, 'classic');
+// console.log(styles.shift());
+// console.log(styles);
+// styles.unshift('rap', 'reggie');
+// console.log(styles);
 
 //TODO:==========================
 // Напишіть функцію min(a, b), яка повертає
 // менше з чисел a, b
 // Потрібно додати перевірку, що функція отримує числа
 
+// function min(a, b) {
+//   let min = a;
+//   if (a == Number || b == Number || a > b) {
+//     min = b;
+//     return console.log(min);
+//   } else if (a == Number || b == Number || a === b) {
+//     return console.log(`${a} and ${b} qual values`);
+//   }
+//   return console.log(`${a} or ${b} is not a Number`);
+// }
+
+// min(45, 12);
+
 //TODO:==============================
 // Напишіть функцію pow(x,n), яка повертає x до ступеня n.
 // Інакше висловлюючись, множить x він n разів і повертає результат.
+
 // function pow(x, n) {
 //   let total = 1;
 //   for (let i = 0; i < n; i += 1) {
@@ -66,10 +80,23 @@ console.log(styles);
 //   return total;
 // }
 // console.log(pow(2, 8));
+// console.log(pow(2, 18));
 
 //TODO:==============================
 // Напишіть функцію яка сумуватиме сусідні числа і пушитиме їх в новий масив
+
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// function sumArr(array) {
+//   const newArr = [];
+//   for (let i = 0; i < array.length - 1; i++) {
+//     //   newArr += array[i] + array[i + 1];
+//     newArr.push(array[i] + array[i + 1]);
+//   }
+//   return console.log(newArr);
+// }
+
+// sumArr(someArr);
 
 //TODO:==========================
 //Напишіть функцію logItems(array), яка приймає
@@ -80,11 +107,51 @@ console.log(styles);
 //['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп']
 //[{name: 'Джаз', engl: "jazz", number: 1}, {name: 'Блюз', engl: "blues", number: 2}, {name: 'Рок-н-рол', engl: "rock 'n' roll", number: 3}, {name: 'Реггі', engl: "reggae", number: 4}, {name: 'Реп', engl: "rap", number: 5} ]
 
+// const someArr = ['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп'];
+
+// function logItems(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     console.log(`${i + 1} - ${array[i]}`);
+//   }
+// }
+
+// logItems(someArr);
+
 //TODO:==========================
 //Напиши функцію findSmallerNumber(numbers)
 //яка шукає найменше число в масиві.
 //Додай перевірку що функція отримує масив
-// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+// const numbers = [20, 5, 35, 56, 12, 24, 7, 80, 3];
+// const numbers2 = [];
+
+// function findSmallerNumber(numbers) {
+//   if (!Array.isArray(numbers) || numbers.length === 0) {
+//     return 'Array is empty or this isn`t array';
+//   }
+//   let smallest = numbers[0];
+//   for (let i = 1; i < numbers.length; i++) {
+//     const element = numbers[i];
+//     // 1st variant
+//     if (smallest > element) {
+//       smallest = element;
+//     }
+//     // // 2nd variant
+//     // if (smallest < element) {
+//     //     continue;
+//     // }
+//     // smallest = element;
+//   }
+//   return smallest;
+// }
+
+// console.log(findSmallerNumber(numbers));
+// console.log(findSmallerNumber(numbers2));
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //TODO:==============================
 // Функція formatMessage(message, maxLength)
