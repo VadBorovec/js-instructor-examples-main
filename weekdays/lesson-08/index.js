@@ -87,7 +87,7 @@ const cars = [
 ];
 // ```
 
-console.table(cars);
+// console.table(cars);
 
 // ## Example 1 - Метод map
 
@@ -280,8 +280,8 @@ const sortByAscendingAmount = cars =>
 // (Властивість onSale), відсортованих за зростанням ціни.
 
 // ```js
-const getSortedCarsOnSale = cars =>
-  cars.filter(({ onSale }) => onSale).sort((a, b) => a.price - b.price);
+// const getSortedCarsOnSale = cars =>
+//   cars.filter(({ onSale }) => onSale).sort((a, b) => a.price - b.price);
 
-console.table(getSortedCarsOnSale(cars));
+// console.table(getSortedCarsOnSale(cars));
 // ```

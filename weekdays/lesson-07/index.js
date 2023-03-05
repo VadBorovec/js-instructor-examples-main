@@ -223,18 +223,14 @@
 // Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
 // ```js
-// function createProduct(partialProduct, callback) {
+// const createProduct = (partialProduct, callback) => {
 //   const product = { id: Date.now(), ...partialProduct };
 //   callback(product);
-// }
+// };
 
-// function logProduct(product) {
-//   console.log(product);
-// }
+// const logProduct = product => console.log(product.name);
 
-// function logTotalPrice(product) {
-//   console.log(product.price * product.quantity);
-// }
+// const logTotalPrice = product => console.log(product.price * product.quantity);
 
 // createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
 // createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
@@ -274,12 +270,8 @@
 //   },
 // };
 
-// function handleSuccess(message) {
-//   console.log(`✅ Success! ${message}`);
-// }
-// function handleError(message) {
-//   console.log(`❌ Error! ${message}`);
-// }
+// const handleSuccess = message => console.log(`✅ Success! ${message}`);
+// const handleError = message => console.error(`❌ Error! ${message}`);
 
 // account.withdraw(2000, handleSuccess, handleError);
 // account.withdraw(600, handleSuccess, handleError);
@@ -297,39 +289,19 @@
 // Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
 // ```js
-// function each(array, callback) {
+// const each = (array, callback) => {
 //   const newArr = [];
 //   for (const el of array) {
 //     newArr.push(callback(el));
 //   }
 //   return newArr;
-// }
+// };
 
-// console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return value * 2;
-//   }),
-// );
-// console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return value - 10;
-//   }),
-// );
-// console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return Math.sqrt(value);
-//   }),
-// );
-// console.log(
-//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
-//     return Math.ceil(value);
-//   }),
-// );
-// console.log(
-//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
-//     return Math.floor(value);
-//   }),
-// );
+// console.log(each([64, 49, 36, 25, 16], value => value * 2));
+// console.log(each([64, 49, 36, 25, 16], value => value - 10));
+// console.log(each([64, 49, 36, 25, 16], value => Math.sqrt(value)));
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.ceil(value)));
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.floor(value)));
 // ```
 
 // ====================================================================
@@ -346,9 +318,17 @@
 //   }
 // }
 
+// // РІШЕННЯ
+// const logItems = items => {
+//   console.log(items);
+//   items.forEach((element, index) => {
+//     console.log(`${index + 1} - ${element}`);
+//   });
+// };
+
 // logItems(['Mango', 'Poly', 'Ajax']);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
-// ```
+// // ```
 
 // ====================================================================
 
@@ -364,6 +344,15 @@
 //     console.log(`${nameList[i]}: ${phoneList[i]}`);
 //   }
 // }
+
+// // РІШЕННЯ
+// const printContactsInfo = ({ names, phones }) => {
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   nameList.forEach((element, index) => {
+//     console.log(`${element}: ${phoneList[index]}`);
+//   });
+// };
 
 // printContactsInfo({
 //   names: 'Jacob,William,Solomon,Artemis',
@@ -385,6 +374,19 @@
 //   }
 //   return total / args.length;
 // }
+
+// // РІШЕННЯ
+// const calсulateAverage = (...args) => {
+//   let total = 0;
+//   args.forEach(element => {
+//     total += element;
+//   });
+//   return total / args.length;
+// };
+
+// // РІШЕННЯ WIHT REDUCE
+// const calсulateAverage = (...args) =>
+//   args.reduce((acc, value) => acc + value) / args.length;
 
 // console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
 // console.log(calсulateAverage(14, 8, 2)); // 8
