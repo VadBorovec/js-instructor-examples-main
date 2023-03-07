@@ -45,3 +45,5 @@ incrementBtn.addEventListener('click', function () {
 // updateCounter(5, counter.decrement.bind(counter));
 
 // console.log(counter); // 0 -> increment 10 -> decrement 5 = 5
+
+// *
