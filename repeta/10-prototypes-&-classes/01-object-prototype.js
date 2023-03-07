@@ -6,6 +6,36 @@
 // - Собственные свойства и object.prototype.has0wnProperty()
 // - Цепочка прототипов
 
+// const objC = {
+//   z: 5,
+// };
+// console.log('objC', objC);
+// // console.log(objC.hasOwnProperty('z'));
+
+// const objB = Object.create(objC);
+// objB.y = 2;
+
+// console.log('objB', objB);
+// // console.log('objB.y', objB.y);
+// // console.log('objB.z', objB.z);
+
+// const objA = Object.create(objB);
+// objA.x = 1;
+// console.log('objA', objA);
+
+// console.log('objA.z', objA.z);
+
+// objA.z = 1000;
+// console.log('objA.z', objA.z);
+// console.log(objA.hasOwnProperty('y'));
+// console.log(objA.hasOwnProperty('z'));
+// console.log(objA.vcd);
+
+// const dummyObj = Object.create({ message: 'Это свойство объекта протортипа' });
+// dummyObj.message = 'Это собственное свойство объекта';
+// console.log('dummyObj', dummyObj);
+// console.log(dummyObj.message);
+
 // 'Это собственное свойство объекта'
 // 'Это свойство на объекте-прототипе'
 

@@ -12,7 +12,7 @@ const counter = {
   },
 };
 
-console.log(document);
+// console.log(document);
 
 const decrementBtn = document.querySelector('.js-decrement');
 
