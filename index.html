@@ -6,10 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        button {
+            margin: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .counter {
+            display: flex;
+            align-items: center;
+        }
+
+        .counter>p {
+            margin: 0;
+            font-size: 48px;
+            font-family: monospace;
+        }
+    </style>
 </head>
 
 <body>
-    <button type="button" class="js-button">btn</button>
+    <div>
+        <h1><button type="button" class="js-button">btn</button></h1>
+        <div class="counter">
+            <button class="js-decrement">Зменшити</button>
+            <p class="js-value">0</p>
+            <button class="js-increment">Збільшити</button>
+        </div>
+    </div>
+
 
     <div class="myownprivate">
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
@@ -93,7 +124,12 @@
         <!-- <script src="./repeta/08-iterating-array-mathods/07-sort.js" type="module"></script> -->
         <!-- <script src="./repeta/08-iterating-array-mathods/08-chaining.js" type="module"></script> -->
         <!-- <script src="./repeta/08-iterating-array-mathods/09-flat.js" type="module"></script> -->
-        <script src="./repeta/08-iterating-array-mathods/10-lodash.js" type="module"></script>
+        <!-- <script src="./repeta/08-iterating-array-mathods/10-lodash.js" type="module"></script> -->
+
+        <!-- THE KEY WORD `THIS` -->
+        <!-- <script src="./repeta/09-keyword-this/01-this.js" type="module"></script> -->
+        <!-- <script src="./repeta/09-keyword-this/02-fn-methods.js" type="module"></script> -->
+        <script src="./repeta/09-keyword-this/03-counter.js" type="module"></script>
 
     </div>
     <div class="weekdays">
