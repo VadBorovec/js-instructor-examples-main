@@ -17,27 +17,48 @@
 // Додай метод `updatePostCount(value)`, який у параметрі `value` приймає
 // кількість постів, які потрібно додати користувачеві.
 
-// ```js
-// const mango = new User({
+// // ```js
+
+// class Blogger {
+//   constructor({ name, age, numberOfPosts, topics } = {}) {
+//     this.name = name;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//     this.topics = topics;
+//   }
+
+//   getInfo() {
+//     return `User ${this.name} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+//   }
+
+//   updatePostCount(value) {
+//     return (this.numberOfPosts += value);
+//   }
+// }
+
+// const mango = new Blogger({
 //   name: 'mango@mail.com',
 //   age: 24,
 //   numberOfPosts: 20,
 //   topics: ['tech', 'cooking'],
 // });
-// console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 20 posts
-// mango.updatePostCount(5);
-// console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 25 posts
 
-// const poly = new User({
+// console.log(mango);
+// console.log(mango.getInfo()); // Blogger mango@mail.com is 24 years old and has 20 posts
+// mango.updatePostCount(5);
+// console.log(mango.getInfo()); // Blogger mango@mail.com is 24 years old and has 25 posts
+
+// const poly = new Blogger({
 //   name: 'poly@mail.com',
 //   age: 19,
 //   numberOfPosts: 17,
 //   topics: ['sports', 'gaming', 'health'],
 // });
-// console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 17 posts
+
+// console.log(poly.getInfo()); // Blogger poly@mail.com is 19 years old and has 17 posts
 // poly.updatePostCount(4);
-// console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 21 posts
-// ```
+// console.log(poly.getInfo()); // Blogger poly@mail.com is 19 years old and has 21 posts
+// // ```
 
 // ## Example 2 - Сховище
 
@@ -51,7 +72,7 @@
 // - `addItem(item)` - отримує новий товар і додає його до поточних.
 // - `removeItem(item)` - отримує товар і, якщо він є, видаляє його з поточних.
 
-// ```js
+// // ```js
 // const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
 
 // const items = storage.getItems();
@@ -62,7 +83,7 @@
 
 // storage.removeItem('🍋');
 // console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
-// ```
+// // ```
 
 // ## Example 3 - User
 
@@ -147,3 +168,86 @@
 // console.log(secondToggle.on);
 // console.groupEnd('secondToggle');
 // ```
+
+// //==================================================================
+
+// // STATUS PROPERTIES // PRIVATE FIELDS & METHODS
+
+// class User {
+//   static STATUS = {
+//     admin: 'ADMIN',
+//     user: 'USER',
+//   };
+
+//   #private;
+
+//   constructor({ name, status } = {}) {
+//     this.name = name;
+//     this.status = status;
+//     this.#private = 'This is private field';
+//   }
+
+//   getPrivate() {
+//     return this.#private;
+//   }
+
+//   setPrivate(newValue) {
+//     if (newValue === 'fooo') return;
+//     this.#private = newValue;
+//   }
+// }
+
+// // console.log(User.STATUS);
+
+// const admin = new User({ name: 'Alex', status: User.STATUS.admin });
+// const user = new User({ name: 'Oleg', status: User.STATUS.user });
+
+// console.log(admin);
+// console.log(user);
+
+// // console.log(admin.name); // have access
+// // console.log(admin.status); // have access
+// // console.log(admin.#private); // no access - because `#private` is private field
+
+// console.log(admin.getPrivate());
+// admin.setPrivate('foo');
+// console.log(admin.getPrivate());
+// admin.setPrivate('other');
+// console.log(admin.getPrivate());
+
+// //==================================================================
+
+// // INHERITANCE
+
+// class Rectangle {
+//   constructor({ height, width }) {
+//     this.name = 'Rectangle';
+//     this.height = height;
+//     this.width = width;
+//   }
+
+//   calculateArea() {
+//     return this.height * this.width;
+//   }
+
+//   sayHello() {
+//     console.log(`Hello, I'm ${this.name}. My Area is ${this.calculateArea()}`);
+//   }
+// }
+
+// class Square extends Rectangle {
+//   constructor(length) {
+//     super({ height: length, width: length });
+//     this.name = 'Square';
+//   }
+// }
+
+// const rectangle = new Rectangle({ height: 5, width: 10 });
+// const square = new Square(5);
+// console.log('rectangle: ', rectangle);
+// console.log('square: ', square);
+// console.log(rectangle.calculateArea());
+// console.log(square.calculateArea());
+
+// rectangle.sayHello();
+// square.sayHello();
