@@ -6,67 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-
-        button {
-            margin: 10px;
-            font-size: 16px;
-            font-family: inherit;
-            cursor: pointer;
-        }
-
-        .counter {
-            display: flex;
-            align-items: center;
-        }
-
-        .counter>p {
-            margin: 0;
-            font-size: 48px;
-            font-family: monospace;
-        }
-    </style>
+    <!-- Нормалізатор -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <!-- Cтилі -->
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-
-    <div class="editor">
-        <p>Donec id justo. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem
-            ut
-            ipsum. Curabitur suscipit suscipit tellus. Phasellus gravida semper nisi.</p>
-        <div class="actions">
-            <button type="button" class="btn" data-action="save">Save</button>
-            <button type="button" class="btn" data-action="close">Close</button>
-        </div>
-    </div>
-
-    <ul class="dishes">
-        <li data-id="14">Baked Yak &amp; Mushrooms</li>
-        <li data-id="7">Strawberry Pancakes</li>
-        <li data-id="3">Caramel Toffee</li>
-        <li data-id="61">Pistachio Elderberry Wafer</li>
-    </ul>
-
 
     <h1><button type="button" class="js-button">btn</button></h1>
     <div class="counter">
         <button class="js-decrement">Зменшити</button>
         <p class="js-value">0</p>
         <button class="js-increment">Збільшити</button>
-    </div>
-    <!-- Siema - Cool plugins -->
-    <div id="counter-1">
-        <button data-decrement>-10</button>
-        <span data-value>0</span>
-        <button data-increment>+10</button>
-    </div>
-    <div id="counter-2">
-        <button data-decrement>-2</button>
-        <span data-value>0</span>
-        <button data-increment>+2</button>
     </div>
     </div>
 
@@ -183,7 +136,7 @@
     <div class="weekends">
         <!-- <script src="./weekends/lesson-01.js"></script> -->
         <script src="./weekends/lesson-02.js"></script>
-        <script src="./weekends/lesson-03.js"></script>
+        <script defer src="./weekends/lesson-03.js"></script>
     </div>
     <div class="autocheck">
         <!-- <script src="./autocheck/autocheck-01.js" type="module"></script> -->
