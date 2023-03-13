@@ -5,147 +5,190 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MAIN</title>
     <!-- Нормалізатор -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <!-- Cтилі -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <h1><button type="button" class="js-button">btn</button></h1>
-    <div class="counter">
-        <button class="js-decrement">Зменшити</button>
-        <p class="js-value">0</p>
-        <button class="js-increment">Збільшити</button>
-    </div>
-    </div>
-
-
     <div class="myownprivate">
-        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-        <script src="./myownprivate/myown-1.js" type="module"></script>
+        <div class="html__myownprivate">
+            <ul>
+                <li>
+                    <div class="counter">
+                        <button class="js-decrement">Зменшити</button>
+                        <p class="js-value">0</p>
+                        <button class="js-increment">Збільшити</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="js__myownprivate">
+            <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+            <script src="./js/myownprivate/01-background-color.js" type="module"></script>
+            <script src="./js/myownprivate/02-first-counter.js" type="module"></script>
+            <script src="./js/myownprivate/03-new-script.js" type="module"></script>
+        </div>
     </div>
     <div class="repeta">
-        <!-- VARIABLES & TYPES-->
+        <div class="html__repeta">
+            <div class="html__dom">
+                <ul>
+                    <li>
+                        <a href="./html/repeta/dom/01-query-selectors.html">Поиск элементов</а>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/02-propertites.html ">Свойства элемента</а>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/03-classlist.html">Интерфейс classList</a>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/04-dom-traversal.html">«авигация» по DOM-дереву</а>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/05-creating-elements.html">Создание элементов</а>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/06-collections.html">Создание коллекции элементов</а>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/07-products.html">Мастерская: создание коллекции товаров</а>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/08-templating.html">Парс строк</а>
+                    </li>
+                    <li>
+                        <a href="./html/repeta/dom/09-transactions.html">Мастерская: таблица транзакций</а>
+                    </li>
+            </div>
+        </div>
+        <div class="js__repeta">
+            <!-- VARIABLES & TYPES-->
 
-        <!-- <script src="./repeta/01-variables/01-vars.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/02-input.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/03-numbers.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/04-strings.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/05-comparison-operators.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/06-logical-operators.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/07-segment.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/08-chat.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/09-subscription.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/10-branching.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/11-purchase.js" type="module"></script> -->
-        <!-- <script src="./repeta/01-variables/12-discount.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/01-vars.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/02-input.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/03-numbers.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/04-strings.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/05-comparison-operators.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/06-logical-operators.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/07-segment.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/08-chat.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/09-subscription.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/10-branching.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/11-purchase.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/01-variables/12-discount.js" type="module"></script> -->
 
-        <!-- BRANCHES & CYCLES -->
+            <!-- BRANCHES & CYCLES -->
 
-        <!-- <script src="./repeta/02-cycles/01-switch.js" type="module"></script> -->
-        <!-- <script src="./repeta/02-cycles/02-for-loop.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/02-cycles/01-switch.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/02-cycles/02-for-loop.js" type="module"></script> -->
 
-        <!-- ARRAYS -->
+            <!-- ARRAYS -->
 
-        <!-- <script src="./repeta/03-arrays/01-basics.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/02-payment.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/03-even.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/04-to-find-login.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/05-smallest-number.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/06-transform.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/07-change-register.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/08-slug.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/09-array-sum.js" type="module"></script> -->
-        <!-- <script src="./repeta/03-arrays/10-cards.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/01-basics.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/02-payment.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/03-even.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/04-to-find-login.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/05-smallest-number.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/06-transform.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/07-change-register.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/08-slug.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/09-array-sum.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/03-arrays/10-cards.js" type="module"></script> -->
 
-        <!-- FUNCTIONS -->
+            <!-- FUNCTIONS -->
 
-        <!-- <script src="./repeta/04-functions/01-basics.js" type="module"></script> -->
-        <!-- <script src="./repeta/04-functions/02-calculate-total-price.js" type="module"></script> -->
-        <!-- <script src="./repeta/04-functions/03-log-items.js" type="module"></script> -->
-        <!-- <script src="./repeta/04-functions/04-find-login.js" type="module"></script> -->
-        <!-- <script src="./repeta/04-functions/05-find-smallest-number.js" type="module"></script> -->
-        <!-- <script src="./repeta/04-functions/06-change-case.js" type="module"></script> -->
-        <!-- <script src="./repeta/04-functions/07-slugify.js" type="module"></script> -->
-        <!-- <script src="./repeta/04-functions/08-arguments.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/04-functions/01-basics.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/04-functions/02-calculate-total-price.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/04-functions/03-log-items.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/04-functions/04-find-login.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/04-functions/05-find-smallest-number.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/04-functions/06-change-case.js" type="module"></script> -->
+            <script src="./js/repeta/04-functions/07-slugify.js" type="module"></script>
+            <!-- <script src="./js/repeta/04-functions/08-arguments.js" type="module"></script> -->
 
-        <!-- OBJECTS -->
+            <!-- OBJECTS -->
 
-        <!-- <script src="./repeta/05-objects/01-creation.js" type="module"></script> -->
-        <!-- <script src="./repeta/05-objects/02-method.js" type="module"></script> -->
-        <!-- <script src="./repeta/05-objects/03-iteration.js" type="module"></script> -->
-        <!-- <script src="./repeta/05-objects/04-friends.js" type="module"></script> -->
-        <!-- <script src="./repeta/05-objects/05-cart.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/05-objects/01-creation.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/05-objects/02-method.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/05-objects/03-iteration.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/05-objects/04-friends.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/05-objects/05-cart.js" type="module"></script> -->
 
-        <!-- OBJECTS DESTRUCTING -->
-        <!-- <script src="./repeta/06-obj-destructing/01-spread.js" type="module"></script> -->
-        <!-- <script src="./repeta/06-obj-destructing/02-destructing.js" type="module"></script> -->
-        <!-- <script src="./repeta/06-obj-destructing/03-markup.js" type="module"></script> -->
+            <!-- OBJECTS DESTRUCTING -->
+            <!-- <script src="./js/repeta/06-obj-destructing/01-spread.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/06-obj-destructing/02-destructing.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/06-obj-destructing/03-markup.js" type="module"></script> -->
 
-        <!-- CALLBACK FUNCTIONS -->
-        <!-- <script src="./repeta/07-callbacks-&-arrow-func/01-callbacks.js" type="module"></script> -->
-        <!-- <script src="./repeta/07-callbacks-&-arrow-func/02-closures.js" type="module"></script> -->
-        <!-- <script src="./repeta/07-callbacks-&-arrow-func/03-arrow-fns.js" type="module"></script> -->
-        <script src="./repeta/07-callbacks-&-arrow-func/04-environment.js" type="module"></script>
-        <!-- <script src="./repeta/07-callbacks-&-arrow-func/05-syntax.js" type="module"></script> -->
-        <!-- <script src="./repeta/07-callbacks-&-arrow-func/06-context.js" type="module"></script> -->
-        <!-- <script src="./repeta/07-callbacks-&-arrow-func/07-refactoring.js" type="module"></script> -->
+            <!-- CALLBACK FUNCTIONS -->
+            <!-- <script src="./js/repeta/07-callbacks-&-arrow-func/01-callbacks.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/07-callbacks-&-arrow-func/02-closures.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/07-callbacks-&-arrow-func/03-arrow-fns.js" type="module"></script> -->
+            <script src="./js/repeta/07-callbacks-&-arrow-func/04-environment.js" type="module"></script>
+            <!-- <script src="./js/repeta/07-callbacks-&-arrow-func/05-syntax.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/07-callbacks-&-arrow-func/06-context.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/07-callbacks-&-arrow-func/07-refactoring.js" type="module"></script> -->
 
-        <!-- ITERATING ARRAY METHODS -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/01-foreeach.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/02-map.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/03-filter.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/04-find.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/05-every-some.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/06-reduce.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/07-sort.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/08-chaining.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/09-flat.js" type="module"></script> -->
-        <!-- <script src="./repeta/08-iterating-array-mathods/10-lodash.js" type="module"></script> -->
+            <!-- ITERATING ARRAY METHODS -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/01-foreeach.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/02-map.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/03-filter.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/04-find.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/05-every-some.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/06-reduce.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/07-sort.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/08-chaining.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/09-flat.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/08-iterating-array-mathods/10-lodash.js" type="module"></script> -->
 
-        <!-- THE KEY WORD `THIS` -->
-        <!-- <script src="./repeta/09-keyword-this/01-this.js" type="module"></script> -->
-        <!-- <script src="./repeta/09-keyword-this/02-fn-methods.js" type="module"></script> -->
-        <script src="./repeta/09-keyword-this/03-counter.js" type="module"></script>
+            <!-- THE KEY WORD `THIS` -->
+            <!-- <script src="./js/repeta/09-keyword-this/01-this.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/09-keyword-this/02-fn-methods.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/09-keyword-this/03-counter.js" type="module"></script> -->
 
-        <!-- PROTOTYPES & CLASSES -->
-        <!-- <script src="./repeta/10-prototypes-&-classes/01-object-prototype.js" type="module"></script> -->
-        <!-- <script src="./repeta/10-prototypes-&-classes/02-constructors.js" type="module"></script> -->
-        <script src="./repeta/10-prototypes-&-classes/03-counter.js" type="module"></script>
-        <!-- <script src="./repeta/10-prototypes-&-classes/04-class.js" type="module"></script> -->
-        <!-- <script src="./repeta/10-prototypes-&-classes/05-inheritance.js" type="module"></script> -->
+            <!-- PROTOTYPES & CLASSES -->
+            <!-- <script src="./js/repeta/10-prototypes-&-classes/01-object-prototype.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/10-prototypes-&-classes/02-constructors.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/10-prototypes-&-classes/03-counter.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/10-prototypes-&-classes/04-class.js" type="module"></script> -->
+            <!-- <script src="./js/repeta/10-prototypes-&-classes/05-inheritance.js" type="module"></script> -->
+
+        </div>
 
     </div>
     <div class="weekdays">
-        <!-- <script src="./weekdays/lesson-01/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-02/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-03/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-04/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-05/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-06/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-07/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-08/index.js" type="module"></script> -->
-        <!-- <script src="./weekdays/lesson-09/index.js" type="module"></script> -->
-        <script src="./weekdays/lesson-10/index.js" type="module"></script>
+        <!-- <script src="./js/weekdays/lesson-01/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-02/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-03/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-04/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-05/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-06/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-07/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-08/index.js" type="module"></script> -->
+        <!-- <script src="./js/weekdays/lesson-09/index.js" type="module"></script> -->
+        <script src="./js/weekdays/lesson-10/index.js" type="module"></script>
     </div>
     <div class="weekends">
-        <!-- <script src="./weekends/lesson-01.js"></script> -->
-        <script src="./weekends/lesson-02.js"></script>
-        <script defer src="./weekends/lesson-03.js"></script>
+        <!-- <script src="./js/weekends/lesson-01.js"></script> -->
+        <script src="./js/weekends/lesson-02.js"></script>
+        <script defer src="./js/weekends/lesson-03.js"></script>
     </div>
     <div class="autocheck">
-        <!-- <script src="./autocheck/autocheck-01.js" type="module"></script> -->
-        <!-- <script src="./autocheck/autocheck-02.js" type="module"></script> -->
-        <!-- <script src="./autocheck/autocheck-03.js" type="module"></script> -->
-        <!-- <script src="./autocheck/autocheck-04.js" type="module"></script> -->
-        <!-- <script src="./autocheck/autocheck-05.js" type="module"></script> -->
-        <!-- <script src="./autocheck/autocheck-06.js" type="module"></script> -->
+        <!-- <script src="./js/autocheck/autocheck-01.js" type="module"></script> -->
+        <!-- <script src="./js/autocheck/autocheck-02.js" type="module"></script> -->
+        <!-- <script src="./js/autocheck/autocheck-03.js" type="module"></script> -->
+        <!-- <script src="./js/autocheck/autocheck-04.js" type="module"></script> -->
+        <!-- <script src="./js/autocheck/autocheck-05.js" type="module"></script> -->
+        <!-- <script src="./js/autocheck/autocheck-06.js" type="module"></script> -->
     </div>
+
 </body>
 
 </html>
