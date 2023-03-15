@@ -10,13 +10,27 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <!-- Cтилі -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 
 <body>
-    <div>
-        <a href="../../../index.html">На головну</a>
-    </div>
+    <button type="button" class="to-top__btn">
+        <a class="to-top__link" href="../../../index.html">На головну</a>
+    </button>
+
+    <table class="transaction-table js-transaction-table">
+        <thead>
+            <tr>
+                <th>ID транзакции</th>
+                <th>Сумма</th>
+                <th>Дата</th>
+                <th>Кто</th>
+                <th>Тип транзации</th>
+                <th>Имя счёта</th>
+                <th>Номер счёта</th>
+            </tr>
+        </thead>
+    </table>
 
     <!-- DOM -->
     <!-- <script src="../../../js/repeta/11-DOM/01-query-selector.js" type="module"></script> -->
@@ -27,7 +41,7 @@
     <!-- <script src="../../../js/repeta/11-DOM/06-collections.js" type="module"></script> -->
     <!-- <script src="../../../js/repeta/11-DOM/07-products.js" type="module"></script> -->
     <!-- <script src="../../../js/repeta/11-DOM/08-templating.js" type="module"></script> -->
-    <!-- <script src="../../../js/repeta/11-DOM/09-transactions.js" type="module"></script> -->
+    <script src="../../../js/repeta/11-DOM/09-transactions.js" type="module"></script>
 
     <!-- Скрипт на зміну кольору бекграунду -->
     <script src="../../../js/myownprivate/01-background-color.js" type="module"></script>
