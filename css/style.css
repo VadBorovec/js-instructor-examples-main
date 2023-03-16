@@ -1,6 +1,9 @@
 body {
-    font-family: sans-serif;
-    margin: 24px;
+font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #2a2a2a;
+    margin-left: 20px;
 }
 
 button {
@@ -65,6 +68,12 @@ button {
     background-color: #002588;
 }
 
+.magic-btn>.icon {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
 .site-nav_link {
     color: currentColor;
 text-decoration: none;
@@ -86,4 +95,19 @@ margin: 4px;
 border: none;
 outline: none;
 cursor: pointer;
+}
+
+.transaction-table {
+    border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+.title__link {
+    display: inline-flex;
+    margin-left: 40px;
 }

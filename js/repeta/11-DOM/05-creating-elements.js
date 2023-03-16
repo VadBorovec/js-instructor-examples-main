@@ -9,8 +9,10 @@
 const titleEl = document.createElement('h1');
 titleEl.classList.add('page-title');
 titleEl.textContent = 'Это заголовок страницы :)';
-// console.log(titleEl);
+console.log(titleEl);
 
+// // Method - appendChild (what child we wont to add and to what parent)
+// // add in th end of block
 // document.body.appendChild(titleEl);
 
 /*
@@ -27,6 +29,7 @@ imageEl.width = 320;
 
 // document.body.appendChild(imageEl);
 
+// Добавляємо заголовок та картинку до потоку через - append
 const heroEl = document.querySelector('.hero');
 // heroEl.appendChild(titleEl);
 // heroEl.appendChild(imageEl);
