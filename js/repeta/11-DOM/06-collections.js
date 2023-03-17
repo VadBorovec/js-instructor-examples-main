@@ -11,6 +11,7 @@ const colorPickerOptions = [
 ];
 
 const colorPickerContainerEl = document.querySelector('.js-color-picker');
+console.log(colorPickerContainerEl);
 
 // const elements = colorPickerOptions.map(option => {
 //   const buttonEl = document.createElement('button');
@@ -39,5 +40,8 @@ const makeColorPickerOptions = options => {
   });
 };
 
+console.log(makeColorPickerOptions(colorPickerOptions));
+
 const elements = makeColorPickerOptions(colorPickerOptions);
+// console.log(elements);
 colorPickerContainerEl.append(...elements);
