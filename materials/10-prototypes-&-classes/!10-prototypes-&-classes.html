@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-prototypes-&-classes</title>
+    <!-- Нормалізатор -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <!-- Cтилі -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <!-- BTN TO-TOP -->
+    <button type="button" class="to-top__btn">
+        <a class="to-top__link" href="../../index.html">На головну</a>
+    </button>
+    <!-- BTN BACK -->
+    <button type="button" class="to-top__btn">
+        <a class="to-top__link" href="../materials.html">До матеріалів</a>
+    </button>
+
+    <!-- HEADER -->
+    <h1 class="page-header">10 prototypes & classes</h1>
+
+    <!-- BTN MAGIC -->
+    <button type="button" class='magic-btn js-magic-btn'>Make magis</button>
+
+    <!-- COUNTER -->
+    <!-- Siema - Cool plugins -->
+    <div id="counter-1">
+        <button data-decrement>-10</button>
+        <span data-value>0</span>
+        <button data-increment>+10</button>
+    </div>
+    <div id="counter-2">
+        <button data-decrement>-2</button>
+        <span data-value>0</span>
+        <button data-increment>+2</button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <div class="js__main">
+        <!-- RANDOM BACKGROUND COLOR -->
+        <script src="../../js/01-background-color.js" type="module"></script>
+        <!-- LODASH -->
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    </div>
+
+    <!-- PROTOTYPES & CLASSES -->
+    <div class="js__materials">
+        <script src="./01-object-prototype.js" type="module"></script>
+        <script src="./02-constructors.js" type="module"></script>
+        <script src="./03-counter.js" type="module"></script>
+        <script src="./04-class.js" type="module"></script>
+        <script src="./05-inheritance.js" type="module"></script>
+    </div>
+
+</body>
+
+</html>

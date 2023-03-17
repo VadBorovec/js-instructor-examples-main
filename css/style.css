@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -19,7 +21,7 @@ button {
 }
 
 .to-top__btn {
-    display: block;
+    /* display: block; */
     padding: 10px;
     margin-bottom: 20px;
     background-color: red;
@@ -115,4 +117,13 @@ cursor: pointer;
 .title__link {
     display: inline-flex;
     margin-left: 40px;
+}
+
+input {
+    font: inherit;
+}
+
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
