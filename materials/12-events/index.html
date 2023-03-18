@@ -10,20 +10,68 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
   <!-- Cтилі -->
-  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
 
+
+
+
 <body>
+
+  <!-- BTN TO-MAIN -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../../index.html">to Main</a>
+  </button>
+  <!-- BTN BACK -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../materials.html">Back</a>
+  </button>
+
+  <!-- HEADER -->
+  <h1 class="page-header">events</h1>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- BTN MAGIC -->
+    <button type="button" class='button magic-btn js-magic-btn'>Make magic<span class="icon">🧙‍♂️</span></button>
+  </section>
+
+  <!-- EVENTS menu -->
   <ul>
-    <li><a href="/01-event-listeners.html">Слушатели событий</a></li>
-    <li><a href="/02-forms.html">Событие сабмита формы</a></li>
-    <li><a href="/03-input-events.html">События инпутов</a></li>
-    <li><a href="/04-keyboard-events.html">События клавиатуры</a></li>
-    <li><a href="/05-mouse-events.html">События мыши</a></li>
-    <li><a href="/06-modal.html">Мастерская: модальное окно</a></li>
+    <li><a href="./01-event-listeners.html">Слушатели событий</a></li>
+    <li><a href="./02-forms.html">Событие сабмита формы</a></li>
+    <li><a href="./03-input-events.html">События инпутов</a></li>
+    <li><a href="./04-keyboard-events.html">События клавиатуры</a></li>
+    <li><a href="./05-mouse-events.html">События мыши</a></li>
+    <li><a href="./06-modal.html">Мастерская: модальное окно</a></li>
   </ul>
-  <!-- SCRIPT FOR RANDOM BACKGROUND COLOR -->
-  <script src="../../../js/myownprivate/01-background-color.js" type="module"></script>
+
+  <!-- SCRIPTS -->
+  <div class="js__main">
+    <!-- RANDOM BACKGROUND COLOR -->
+    <script src="../../js/01-background-color.js" type="module"></script>
+    <!-- LODASH -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  </div>
+
+  <!-- JS DOM -->
+  <!-- <script src="./js/01-query-selector.js" type="module"></script> -->
+  <!-- <script src="./js/02-properties.js" type="module"></script> -->
+  <!-- <script src="./js/03-classlist.js" type="module"></script> -->
+  <!-- <script src="./js/04-dom-traversal.js" type="module"></script> -->
+  <!-- <script src="./js/05-creating-elements.js" type="module"></script> -->
+  <!-- <script src="./js/06-collections.js" type="module"></script> -->
+  <!-- <script src="./js/07-products.js" type="module"></script> -->
+  <!-- <script src="./js/08-templating.js" type="module"></script> -->
+  <!-- <script src="./js/09-transactions.js" type="module"></script> -->
+
 </body>
 
 </html>

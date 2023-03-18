@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Слушатели событий</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <p><a href="/">На главную</a></p>
 
-    <button type="button" class="js-target-btn">Целевая кнопка</button>
-    <button type="button" class="js-add-listener">Добавить слушатель</button>
-    <button type="button" class="js-remove-listener">Снять слушатель</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>01-event-listeners</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
 
-    <script src="./js/01-event-listeners.js" type="module"></script>
-  </body>
+<body>
+
+  <!-- BTN TO-MAIN -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../../index.html">to Main</a>
+  </button>
+  <!-- BTN BACK -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../12-events/index.html">Back</a>
+  </button>
+
+  <!-- HEADER -->
+  <h1 class="page-header">01 event listeners</h1>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- BTN MAGIC -->
+    <button type="button" class='button magic-btn js-magic-btn'>Make magic<span class="icon">🧙‍♂️</span></button>
+  </section>
+
+  <!-- BODY -->
+  <button type="button" class="js-target-btn">Целевая кнопка</button>
+  <button type="button" class="js-add-listener">Добавить слушатель</button>
+  <button type="button" class="js-remove-listener">Снять слушатель</button>
+
+  <!-- SCRIPTS -->
+  <script src="./js/01-event-listeners.js" type="module"></script>
+
+  <div class="js__main">
+    <!-- RANDOM BACKGROUND COLOR -->
+    <script src="../../js/01-background-color.js" type="module"></script>
+    <!-- LODASH -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  </div>
+
+</body>
+
 </html>

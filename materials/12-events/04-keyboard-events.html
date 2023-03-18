@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>События клавиатуры</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <style>
-      .output {
-        font-size: 24px;
-      }
-    </style>
-  </head>
-  <body>
-    <p><a href="/">На главную</a></p>
 
-    <button class="js-clear">Очистить</button>
-    <p class="output js-output"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>04-keyboard-events</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .output {
+      font-size: 24px;
+    }
+  </style>
+</head>
 
-    <script src="./js/04-keyboard-events.js" type="module"></script>
-  </body>
+<body>
+
+  <!-- BTN TO-MAIN -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../../index.html">to Main</a>
+  </button>
+  <!-- BTN BACK -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../12-events/index.html">Back</a>
+  </button>
+
+  <!-- HEADER -->
+  <h1 class="page-header">04 keyboard events</h1>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- BTN MAGIC -->
+    <button type="button" class='button magic-btn js-magic-btn'>Make magic<span class="icon">🧙‍♂️</span></button>
+  </section>
+
+  <!-- BODY -->
+  <button class="js-clear">Очистить</button>
+  <p class="output js-output"></p>
+
+  <!-- SCRIPTS -->
+  <script src="./js/04-keyboard-events.js" type="module"></script>
+
+  <div class="js__main">
+    <!-- RANDOM BACKGROUND COLOR -->
+    <script src="../../js/01-background-color.js" type="module"></script>
+    <!-- LODASH -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  </div>
+
+</body>
+
 </html>

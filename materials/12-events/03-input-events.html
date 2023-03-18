@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>События инпутов</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <p><a href="/">На главную</a></p>
 
-    <!-- <form action="" autocomplete="off"> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>03-input-events</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+
+<body>
+
+  <!-- BTN TO-MAIN -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../../index.html">to Main</a>
+  </button>
+  <!-- BTN BACK -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../12-events/index.html">Back</a>
+  </button>
+
+  <!-- HEADER -->
+  <h1 class="page-header">03 input events</h1>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- BTN MAGIC -->
+    <button type="button" class='button magic-btn js-magic-btn'>Make magic<span class="icon">🧙‍♂️</span></button>
+  </section>
+
+  <!-- BODY -->
+  <!-- <form action="" autocomplete="off"> -->
+  <label>
+    Имя
+    <input type="text" class="js-input" />
+  </label>
+
+  <p>
     <label>
-      Имя
-      <input type="text" class="js-input" />
+      <input type="checkbox" class="js-license" />
+      Принимаю лицензинное соглашение
     </label>
+  </p>
 
-    <p>
-      <label>
-        <input type="checkbox" class="js-license" />
-        Принимаю лицензинное соглашение
-      </label>
-    </p>
+  <button type="submit" disabled class="js-button">
+    Зарегистрироваться как <span>Аноним</span>
+  </button>
+  <!-- </form> -->
 
-    <button type="submit" disabled class="js-button">
-      Зарегистрироваться как <span>Аноним</span>
-    </button>
-    <!-- </form> -->
+  <!-- SCRIPTS -->
+  <script src="./js/03-input-events.js" type="module"></script>
 
-    <script src="./js/03-input-events.js" type="module"></script>
-  </body>
+  <div class="js__main">
+    <!-- RANDOM BACKGROUND COLOR -->
+    <script src="../../js/01-background-color.js" type="module"></script>
+    <!-- LODASH -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  </div>
+
+</body>
+
 </html>
