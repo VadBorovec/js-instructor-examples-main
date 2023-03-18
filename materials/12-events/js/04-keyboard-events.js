@@ -9,12 +9,15 @@ const refs = {
   clearBtn: document.querySelector('.js-clear'),
 };
 
+// реагує на нажаття всіх клавіш
+window.addEventListener('keydown', onKeypress);
+// реагє на нажаття клавіш букв цифр та спецсимволів
 window.addEventListener('keypress', onKeypress);
 refs.clearBtn.addEventListener('click', onClearOutput);
 
 function onKeypress(event) {
-  // console.log('event.key: ', event.key);
-  // console.log('event.code: ', event.code);
+  console.log('event.key: ', event.key);
+  console.log('event.code: ', event.code);
 
   refs.output.textContent += event.key;
 }

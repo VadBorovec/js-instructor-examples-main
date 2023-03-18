@@ -14,6 +14,7 @@ function onFormSubmit(event) {
 
   const formData = new FormData(event.currentTarget);
 
+  // console.dir(event.currentTarget.elements.subscription.value);
   console.log(formData);
 
   formData.forEach((value, name) => {

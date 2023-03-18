@@ -16,6 +16,10 @@ refs.openModalBtn.addEventListener('click', onOpenModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdrop.addEventListener('click', onBackdropClick);
 
+// div.backdrop -------------------------------- < - catch here
+// div.modal ---------------------------------
+// p  -------------------------------------- <- click here
+
 function onOpenModal() {
   window.addEventListener('keydown', onEscKeyPress);
   document.body.classList.add('show-modal');
@@ -27,6 +31,9 @@ function onCloseModal() {
 }
 
 function onBackdropClick(event) {
+  console.log(event.currentTarget);
+  console.log(event.target);
+
   if (event.currentTarget === event.target) {
     console.log('Кликнули именно в бекдроп!!!!');
     onCloseModal();
