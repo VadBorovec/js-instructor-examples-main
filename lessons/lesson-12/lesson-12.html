@@ -11,6 +11,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <!-- Cтилі -->
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 
 <body>
@@ -37,9 +38,19 @@
     <!-- HERO -->
     <section class="hero">
         <!-- BTN MAGIC -->
-        <button type="button" class=' button button-3d btn-3d magic-btn js-magic-btn'>Make magic<span
+        <button type="button" class=' button open-btn magic-btn js-magic-btn' id="openBtn">Make magic<span
                 class="icon">🧙‍♂️</span></button>
     </section>
+
+    <!-- BODY -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal-window" id="modalWindov">
+        <h2>This is modal</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Vel, minima repudiandae provident cum eligendi enim.
+        </p>
+        <button class="close-btn" id="closeBtn">Close</button>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
