@@ -14,8 +14,8 @@ const refs = {
   btn: document.querySelector('.js-button'),
 };
 
-// refs.input.addEventListener('focus', onInputFocus);
-// refs.input.addEventListener('blur', onInputBlur);
+refs.input.addEventListener('focus', onInputFocus);
+refs.input.addEventListener('blur', onInputBlur);
 // refs.input.addEventListener('change', onInputChange);
 // refs.input.addEventListener('input', onInputChange);
 
