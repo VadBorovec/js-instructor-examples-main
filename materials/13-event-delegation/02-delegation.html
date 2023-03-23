@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Делегирование событий</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      outline: 2px solid tomato;
+    }
+
+    button {
+      margin: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BTN TO-MAIN -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="../../index.html">to Main</a>
+  </button>
+  <!-- BTN BACK -->
+  <button type="button" class="button back-btn">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path fill="#fff" d="M15.5 8.5l-1-1L10 12l4.5 4.5 1-1L12 12z" />
+    </svg>
+    <a class="to-top__link" href="./index.html">Back</a>
+  </button>
+
+  <!-- HEADER -->
+  <h1 class="page-header">01-bubbling</h1>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- BTN MAGIC -->
+    <button type="button" class=' button button-3d btn-3d magic-btn js-magic-btn'>Make magic<span
+        class="icon">🧙‍♂️</span></button>
+  </section>
+
+  <!-- BODY -->
+  <button class="js-add-btn">Добавить кнопку</button>
+  <hr />
+
+  <div class="container js-container">
+    <button type="button">Кнопка 1</button>
+    <button type="button">Кнопка 2</button>
+    <button type="button">Кнопка 3</button>
+    <button type="button">Кнопка 4</button>
+    <button type="button">Кнопка 5</button>
+  </div>
+
+  <script src="./js/02-delegation.js" type="module"></script>
+</body>
+
+</html>
