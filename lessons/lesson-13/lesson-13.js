@@ -28,11 +28,9 @@
 //   });
 // }
 
-/*
-* event.target - цільовий елемент, на якому відбулася подія
+//* event.target - цільовий елемент, на якому відбулася подія
 
-* event.currentTarget - це елемент, на якому висить обробник подій
-*/
+//* event.currentTarget - це елемент, на якому висить обробник подій
 
 //! =============================================
 
@@ -108,3 +106,20 @@ function update() {
   total.textContent = data.calcTotalPrice() + 'грн';
   amount.textContent = data.quantity;
 }
+
+//! =============================================
+
+// Как вывести formData в форме объекта?
+//     const formData = new FormData(event.currentTarget);
+//      formData.forEach((x, y) => {
+//  console.log("name: ", y);
+//  console.log("value: ", x);
+
+const formData = new FormData(form);
+
+const formObj = {};
+formData.forEach((value, name) => {
+  formObj[name] = value;
+});
+
+console.log(formObj);
