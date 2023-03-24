@@ -11,6 +11,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <!-- Cтилі -->
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -40,6 +41,48 @@
         <button type="button" class=' button button-3d btn-3d magic-btn js-magic-btn'>Make magic<span
                 class="icon">🧙‍♂️</span></button>
     </section>
+
+    <!-- BODY -->
+    <!-- Показати як працює тротл на основі події resize та scroll -->
+    <div class="counter">
+        <h2>Scroll</h2>
+        <div class="box">
+            Without throttled: <span id="otuputScrollStandart">0</span>
+        </div>
+        <div class="box">
+            With throttled: <span id="otuputScrollThrottled">0</span>
+        </div>
+    </div>
+    <div class="counter counter-resize">
+        <h2>Resize</h2>
+        <div class="box">
+            Without throttled: <span id="otuputResizeStandart">0</span>
+        </div>
+        <div class="box">
+            With throttled: <span id="otuputResizeThrottled">0</span>
+        </div>
+    </div>
+
+    <!-- Показати як працює дебаунс на основі роботи  інпутом -->
+
+    <label class="input">Enter your name
+        <input type="text" id="nameInput" placeholder="Name">
+    </label>
+
+    <!-- Написати форму логіна та пароля де буде відбуватися валідація полів на довжину після закінчення введення тексту. (Використати дебаунс) -->
+
+    <form id="signInForm">
+        <fieldset>
+            <legend>Sign in</legend>
+            <label>Enter your login
+                <input type="text" id="loginInput" placeholder="Login">
+            </label>
+            <label>Enter your password
+                <input type="password" id="passwordInput" placeholder="Password">
+            </label>
+        </fieldset>
+    </form>
+
 
     <!-- FOOTER -->
     <footer class="footer">
