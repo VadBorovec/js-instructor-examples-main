@@ -53,58 +53,46 @@
 // При завантаженні сторінки сприпт має автоматично розрахувати вартість на основі даних за замовчуванням які ви встановите в розмітці.
 
 // обʼєкт, у якому будемо зберігати значення полів з форми та рахувати фінальну вартість
-
-// ===================================================
-
-// data -  обʼєкт, у якому будемо зберігати значення полів з форми
-// та рахувати фінальну вартість
 const data = {
   price: 0,
   quantity: 0,
-
   calcTotalPrice() {
     return (this.price * this.quantity).toFixed(2);
   },
 };
 
-// console.log(data.calcTotalPrice());
-
-// DOM links
-const form = document.getElementById('form');
-const total = document.getElementById('total');
-const amount = document.getElementById('amount');
+//dom links
+const form = document.getElementById("form");
+const total = document.getElementById("total");
+const amount = document.getElementById("amount");
 
 dataFill();
 update();
-// console.log(data);
 
-//  events
-form.addEventListener('change', onFormChange);
+//events
+form.addEventListener("input", handleFormChange);
 
-// functions
-
-function onFormChange({ target }) {
-  // const target = event.target;
+//functions
+function handleFormChange({ target }) {
   const { value } = target;
 
-  if (target === form.elements.quantity) {
-    amount.textContent = value;
-  }
+  // if (target === form.elements.quantity) {
+  //   amount.textContent = value;
+  // }
 
-  target.setAttribute('value', value); //* перезаписуємо значення value в html атрибуті
-
+  target.setAttribute("value", value);
   dataFill();
   update();
 }
 
 //* наповнює обʼєкт data значеннями з атрибутів value у елементів форм
 function dataFill() {
-  data.price = form.elements.price.getAttribute('value');
-  data.quantity = form.elements.quantity.getAttribute('value');
+  data.price = form.elements.price.getAttribute("value");
+  data.quantity = form.elements.quantity.getAttribute("value");
 }
 
 //* оновлює інтерфейс калькулятора (показує вартість та оновлює amount)
 function update() {
-  total.textContent = data.calcTotalPrice() + 'грн';
+  total.textContent = data.calcTotalPrice() + " грн";
   amount.textContent = data.quantity;
 }
