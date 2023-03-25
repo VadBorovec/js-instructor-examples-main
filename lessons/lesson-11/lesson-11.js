@@ -5,7 +5,7 @@
 // console.log(container.childNodes);
 // console.log(container.children);
 
-// ==========================================================================
+// ! ==========================================================================
 
 //* 1. Створити список технологій ЩО вивчаються на курсі Fullstack за допомогою js
 // Показати як це робиться через **тар** та **reduce**
@@ -77,7 +77,7 @@ const markup = `<ul>${technologies.reduce(
 const hero = document.querySelector('.hero');
 hero.insertAdjacentHTML('afterend', markup);
 
-// ==========================================================================
+// ! ==========================================================================
 
 //* 2. Створити кілька кнопок на основі масива 3 обектами використовуючи createElement
 
@@ -108,7 +108,7 @@ const colors = [
 </div>
 */
 
-// //----------- for of ------------------
+// ----------- for of ------------------
 
 const btnWrap = document.createElement('div');
 btnWrap.style.display = 'flex';
@@ -133,7 +133,7 @@ for (const { label, color } of colors) {
 // const hero = document.querySelector('.hero');
 hero.after(btnWrap);
 
-// // ------- map --------------
+//  ------- map --------------
 
 const btnWrapMap = document.createElement('div');
 btnWrapMap.style.display = 'flex';
@@ -155,5 +155,3 @@ colors.map(({ label, color }) => {
 });
 
 btnWrap.after(btnWrapMap);
-
-// //---------- reduce ------------

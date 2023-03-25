@@ -17,21 +17,17 @@ import products from './data/products.js';
 //   onSale: true,
 // };
 
-// {
-//   /*
-// <article class="product">
-//   <h2 class="product__name">Название</h2>
-//   <p class="product__descr">Описание</p>
-//   <p product__pridct>Цена: 1111 кредитов</p>
-// </article>
-// */
-// }
-
 /*
- * Пишем функцию для создания карточки продукта
- */
+<article class="product">
+  <h2 class="product__name">Название</h2>
+  <p class="product__descr">Описание</p>
+  <p product__pridct>Цена: 1111 кредитов</p>
+</article>
+*/
 
-// // 1st variant
+//* Пишем функцию для создания карточки продукта
+
+//* 1st variant
 // const productEl = document.createElement('article');
 // console.log(productEl);
 // productEl.classList.add('product');
@@ -57,13 +53,10 @@ import products from './data/products.js';
 
 // ====================================================================
 
-/*
- * Создаём карточку продукта
- * - В классе продукта может быть product--on-sale product--not-available
- */
+//* Создаём карточку продукта
+// * - В классе продукта может быть product--on-sale product--not-available
 
-// 2nd variant with function
-
+//* 2nd variant with function
 const productsContainerEl = document.querySelector('.js-products');
 
 const makeProductCard = ({ name, description, price }) => {
