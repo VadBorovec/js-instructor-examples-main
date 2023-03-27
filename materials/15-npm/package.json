@@ -1,28 +1,31 @@
 {
-  "name": "js-22",
+  "name": "15-npm",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "NPM basic Vadim",
+  "source": "src/index.js",
+  "main": "15-npm.js",
   "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build src/index.js",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "15npm": "cd ./materials/15-npm/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxplanjay/js-22.git"
+    "url": "git+https://github.com/VadBorovec/js-instructor-examples-main.git"
   },
-  "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Vadim Borovec",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luxplanjay/js-22/issues"
+    "url": "https://github.com/VadBorovec/js-instructor-examples-main/issues"
   },
-  "homepage": "https://github.com/luxplanjay/js-22#readme",
+  "homepage": "https://github.com/VadBorovec/js-instructor-examples-main#readme",
   "dependencies": {
-    "joi": "^17.2.1",
-    "shortid": "^2.2.15"
+    "@babel/preset-env": "^7.20.2",
+    "joi": "^17.9.1",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^2.8.3"
   }
 }
